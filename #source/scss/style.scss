@@ -5,7 +5,7 @@
 
 body,
 html {
-    // font-family: 
+    // font-family:
     color: $maneTextColor;
     scroll-behavior: smooth;
 }
@@ -13,5 +13,297 @@ html {
     max-width: 1180px;
     margin: 0 auto;
 }
+.invisible__on-mobile {
+    display: block;
+}
+.invisible__on-pc {
+    display: none;
+}
 
+.header {
+    &__background {
+        position: relative;
+        background-image: linear-gradient(
+                348deg,
+                rgba(0, 0, 0, 0) 30.45%,
+                #000 224.82%
+            ),
+            url("/img/PC/previewBGCar.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        min-height: 100vh;
+        min-width: 100%;
+    }
+    &__content {
+        &-top {
+            padding-top: 47px;
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            &-logo {
+                width: 231px;
+                height: 28.25px;
+                background-image: url("/img/PC/headerLogo.png");
+                background-repeat: no-repeat;
+            }
+            &-text {
+                display: flex;
+                align-items: center;
+                gap: 30px;
+                @include fontSW(12px, 400);
+                color: #fff;
+                & a {
+                    color: #fff;
+                }
+                & button {
+                    color: #fff;
+                    @include fontSW(15px, 700);
+                    padding: 15.5px 35px;
+                    border: 1px solid #fff;
+                    background: none;
+                }
+            }
+        }
+        &-navigation {
+            display: flex;
+            gap: 40px;
+            @include fontSW(16px, 500);
+            margin-bottom: 60px;
+            & a {
+                color: #fff;
+                position: relative;
+            }
+            & a::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: -2px;
+                height: 1px;
+                width: 0;
+                background-color: #fff;
+                transition: width 0.2s;
+            }
+            & a:hover::after {
+                width: 100%;
+            }
+        }
+        &-text {
+            color: #fff;
+            & h1 {
+                max-width: 901px;
+                @include fontSW(50px, 700);
+                line-height: 91%;
+                margin-bottom: 30px;
+            }
+            & h2 {
+                max-width: 766px;
+                @include fontSW(30px, 400);
+                margin-bottom: 69px;
+            }
+            & button {
+                background-color: #fff;
+                padding: 18.5px 51px;
+                @include fontSW(20px, 500);
+                color: $maneTextColor;
+            }
+        }
+    }
+}
 
+.timer {
+    &__content {
+        padding: 25px 0px;
+        // display: flex;
+        // flex-wrap: wrap;
+        // align-items: center;
+        // justify-content: space-between;
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        justify-content: end;
+        align-content: end;
+        align-items: center;
+        &-left {
+            display: flex;
+            flex-direction: column;
+            gap: 17px;
+            & h2 {
+                @include fontSW(29px, 700);
+                line-height: 111%;
+                text-transform: uppercase;
+                max-width: 312px;
+            }
+            & p {
+                max-width: 256px;
+                @include fontSW(18px, 500);
+                line-height: 136%;
+            }
+        }
+        &-center {
+            & span.timer-element > span:nth-child(odd) {
+                //стили для цифр у таймера
+                // background: red;
+            }
+            & span.timer-element > span:nth-child(even) {
+                //стили для текста у таймера
+                // background: blue;
+            }
+        }
+        & button {
+            padding: 14.5px 12.5px;
+            text-transform: uppercase;
+            @include fontSW(15px, 700);
+            color: #fff;
+            background-color: $maneTextColor;
+        }
+    }
+}
+//промежуточный значения для более удобного адаптива
+@media (width<1180px) {
+    .invisible__on-mobile {
+        display: none;
+    }
+    .invisible__on-pc {
+        display: block;
+    }
+    .container {
+        max-width: 90%;
+    }
+    .active-burger {
+        & > div:nth-child(1) {
+            width: 14px;
+        }
+        & > div:nth-child(2) {
+            width: 21px;
+        }
+    }
+    .active-menu {
+        display: block !important;
+    }
+    .header {
+        &__content {
+            &-top {
+                &-mobile {
+                    height: 76px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    &-logo {
+                        width: 112px;
+                        height: 13.696px;
+                        background-image: url("/img/Mobile/headerLogo.png");
+                        background-repeat: no-repeat;
+                    }
+                    &-phone {
+                        color: $maneTextColor;
+                        @include fontSW(12px, 400);
+                    }
+                    &-burger {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: start;
+                        justify-content: center;
+                        gap: 6px;
+                        background-color: #fff;
+                        &1 {
+                            width: 25px;
+                            height: 2px;
+                            background-color: #54dbdd;
+                            transition: width 0.3s ease-in-out;
+                        }
+                        &2 {
+                            width: 25px;
+                            height: 2px;
+                            background-color: #54dbdd;
+                            transition: width 0.3s ease-in-out;
+                        }
+                        &3 {
+                            width: 25px;
+                            height: 2px;
+                            background-color: #54dbdd;
+                        }
+                    }
+                }
+            }
+            &-navigation {
+                &-mobile {
+                    display: none;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    background-color: #f2f2f2;
+                    min-width: 100%;
+                    min-height: 100vh;
+                    padding: 30px 20px;
+                    text-align: center;
+                    & ul {
+                        text-align: left;
+                        & a {
+                            color: $maneTextColor;
+                            & li {
+                                margin-bottom: 18px;
+                                @include fontSW(16px, 400);
+                            }
+                        }
+
+                        & a:last-child {
+                            & li {
+                                margin-bottom: 38px;
+                            }
+                        }
+                    }
+                    & h2 {
+                        max-width: 197px;
+                        @include fontSW(14px, 400);
+                        line-height: 130%;
+                        margin: 0 auto;
+                        margin-bottom: 13px;
+                    }
+                    & a {
+                        color: $maneTextColor;
+                        @include fontSW(14px, 400);
+                    }
+                    & button {
+                        margin: 0 auto;
+                        margin-top: 27px;
+                        display: block;
+                        @include fontSW(14px, 400);
+                        padding: 16px 40px;
+                        border: 1px solid #000;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (width>768px) and (width<1180px) {
+    .timer {
+        &__content {
+            // text-align: center;
+            grid-template-columns: 1fr 2fr;
+            justify-items: center;
+            row-gap: 20px;
+            & button {
+                // grid-row: ;
+                grid-column: 1/3;
+            }
+        }
+    }
+}
+@media (width<769px) {
+    .container {
+        max-width: 88.8%;
+    }
+    .timer {
+        &__content {
+            
+            text-align: center;
+            grid-template-columns: 1fr;
+            justify-items: center;
+            row-gap: 20px;
+            & button {
+            }
+        }
+    }
+}
