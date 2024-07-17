@@ -1,0 +1,17 @@
+@import "_nullstyle.scss";
+@import "_vars.scss";
+@import "_mixins.scss";
+//fonts
+
+body,
+html {
+    // font-family: 
+    color: $maneTextColor;
+    scroll-behavior: smooth;
+}
+.container {
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+
