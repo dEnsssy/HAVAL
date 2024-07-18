@@ -1,11 +1,12 @@
 @import "_nullstyle.scss";
 @import "_vars.scss";
 @import "_mixins.scss";
+@import "_fonts.scss";
 //fonts
 
 body,
 html {
-    // font-family:
+    font-family: "Halvar Breitschrift";
     color: $maneTextColor;
     scroll-behavior: smooth;
 }
@@ -28,7 +29,7 @@ html {
                 rgba(0, 0, 0, 0) 30.45%,
                 #000 224.82%
             ),
-            url("/img/PC/previewBGCar.png");
+            url("../img/PC/previewBGCar.png");
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
@@ -45,7 +46,7 @@ html {
             &-logo {
                 width: 231px;
                 height: 28.25px;
-                background-image: url("/img/PC/headerLogo.png");
+                background-image: url("../img/PC/headerLogo.png");
                 background-repeat: no-repeat;
             }
             &-text {
@@ -113,12 +114,9 @@ html {
 }
 
 .timer {
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.25);
     &__content {
         padding: 25px 0px;
-        // display: flex;
-        // flex-wrap: wrap;
-        // align-items: center;
-        // justify-content: space-between;
         display: grid;
         grid-template-columns: 1fr 2fr 1fr;
         justify-content: end;
@@ -142,12 +140,22 @@ html {
         }
         &-center {
             & span.timer-element > span:nth-child(odd) {
-                //стили для цифр у таймера
-                // background: red;
+                //стили для цифр у таймера PC
+                font-family: "Halvar Breitschrift" !important;
             }
             & span.timer-element > span:nth-child(even) {
-                //стили для текста у таймера
-                // background: blue;
+                //стили для текста у таймера PC
+                font-family: "Halvar Breitschrift" !important;
+            }
+            &-mobile {
+                & span.timer-element > span:nth-child(odd) {
+                    //стили для цифр у таймера Mobile
+                    font-family: "Halvar Breitschrift" !important;
+                }
+                & span.timer-element > span:nth-child(even) {
+                    //стили для текста у таймера Mobile
+                    font-family: "Halvar Breitschrift" !important;
+                }
             }
         }
         & button {
@@ -156,9 +164,309 @@ html {
             @include fontSW(15px, 700);
             color: #fff;
             background-color: $maneTextColor;
+            justify-self: end;
+            font-family: "Inter";
         }
     }
 }
+.models {
+    margin-bottom: 112px;
+    & > h1 {
+        margin-top: 100px;
+        @include fontSW(45px, 700);
+        text-transform: uppercase;
+        margin-bottom: 60px;
+    }
+    &__list {
+        margin: 0 auto;
+        max-width: 840px;
+        position: relative;
+        margin-bottom: 67px;
+        & .swiper-wrapper {
+            padding: 0 20px;
+        }
+        & .swiper-container {
+            overflow: hidden;
+        }
+        & .swiper-slide {
+            width: auto !important;
+            & button {
+                @include fontSW(20px, 700);
+                background-color: #fff;
+                color: #000 !important;
+                position: relative;
+            }
+            & button::after {
+                content: "";
+                display: block;
+                position: absolute;
+                left: 0;
+                bottom: 0px;
+                height: 1px;
+                width: 0px !important;
+                background-color: #000;
+                transition: width 0.3s;
+            }
+            & button:hover::after {
+                width: 100% !important;
+            }
+        }
+        & .swiper-slide:last-child {
+            margin-right: 0 !important;
+        }
+        // настройка стрелочек
+        & .swiper-button-next1,
+        .swiper-button-prev1 {
+            color: #54dbdd;
+        }
+        & .swiper-button-prev {
+            left: -20px;
+        }
+        & .swiper-button-next {
+            right: -20px;
+        }
+        & .swiper-button-next:after,
+        .swiper-button-prev:after {
+            font-size: 12px;
+            font-weight: 700;
+        }
+    }
+    &__cars {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        &-card {
+            display: grid;
+            justify-content: space-between;
+            grid-template-columns: 580px 479px;
+            background-image: url("../img/PC/modelsBg.png");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 100%;
+            &-title {
+                & h1 {
+                    @include fontSW(40px, 500);
+                    border-bottom: 1px solid $maneTextColor;
+                    margin-bottom: 13px;
+                    & span {
+                        color: $additionalColor;
+                    }
+                }
+                & div {
+                    margin-bottom: 13px;
+                    & h2 {
+                        @include fontSW(36px, 900);
+                    }
+                    & h3 {
+                        @include fontSW(24px, 700);
+                        color: #939393;
+                        text-decoration: line-through;
+                    }
+                }
+            }
+            &-images {
+                grid-row: 2/3;
+                &-cars {
+                    padding-bottom: 30px;
+                }
+                & .swiper-pagination {
+                    bottom: 0px;
+                    & :nth-child(1) {
+                        background: #00a5ff;
+                    }
+                    & :nth-child(2) {
+                        background-color: #c5c5c5;
+                    }
+                    & :nth-child(3) {
+                        background-color: #c80405;
+                    }
+                    & :nth-child(4) {
+                        background-color: #fff;
+                    }
+                    & :nth-child(5) {
+                        background-color: #000;
+                    }
+                }
+                & .swiper-pagination span {
+                    width: 30px;
+                    height: 30px;
+                    border: 1px solid grey;
+                }
+                & .swiper-pagination-bullet {
+                    opacity: 1;
+                }
+                & .swiper-pagination-bullet-active {
+                    background: none;
+
+                    border: 1px solid $maneTextColor !important;
+                }
+            }
+            &-info {
+                margin-top: 42px;
+                grid-row: 1/3;
+                & h1 {
+                    height: 42px;
+                    @include fontSW(20px, 500);
+                    color: #000;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background-image: url("../img/PC/modelsBGKasko.png");
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    margin-bottom: 40px;
+                }
+                & ul {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                    margin-bottom: 61px;
+                    color: #000;
+                    & li {
+                        display: flex;
+                        align-items: center;
+                        gap: 20px;
+                        & p {
+                            @include fontSW(25px, 500);
+                        }
+                    }
+                }
+                &-svg {
+                    &1 {
+                        width: 33px;
+                        height: 33px;
+                        background-image: url("../img/PC/modelsList1.png");
+                    }
+                    &2 {
+                        width: 32.453px;
+                        height: 32.453px;
+                        background-image: url("../img/PC/modelsList2.png");
+                    }
+
+                    &3 {
+                        width: 24.861px;
+                        height: 27px;
+                        background-image: url("../img/PC/modelsList3.png");
+                        margin-right: 8px;
+                    }
+                }
+                &-btns {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+
+                    &-1 {
+                        @include fontSW(15px, 700);
+                        text-transform: uppercase;
+                        font-family: "Noto Sans";
+                        background: none;
+                        padding: 20px 0;
+                        border: 1px solid $maneTextColor;
+                        transition: all 0.2s ease-in-out;
+                    }
+                    &-1:hover {
+                        color: $additionalColor;
+                        border: 1px solid $additionalColor;
+                    }
+                    &-2 {
+                        @include fontSW(15px, 700);
+                        padding: 20px 0;
+                        text-transform: uppercase;
+                        font-family: "Noto Sans";
+                        background-color: $maneTextColor;
+                        color: #fff;
+                        transition: background-color 0.2s ease-in-out;
+                    }
+                    &-2:hover {
+                        background-color: #6b6b6b;
+                    }
+                }
+            }
+            &1 {
+                & .swiper-slide {
+                    width: 568px;
+                    height: 310.204px;
+                    background-position: center;
+                    &-1 {
+                        background-image: url("../img/PC/modelsCar1.png");
+                        background-repeat: no-repeat;
+                    }
+                    &-2 {
+                        background-image: url("../img/PC/modelsCar1.png");
+                        background-repeat: no-repeat;
+                    }
+                    &-3 {
+                        background-image: url("../img/PC/modelsCar1.png");
+                        background-repeat: no-repeat;
+                    }
+                    &-4 {
+                        background-image: url("../img/PC/modelsCar1.png");
+                        background-repeat: no-repeat;
+                    }
+                    &-5 {
+                        background-image: url("../img/PC/modelsCar1.png");
+                        background-repeat: no-repeat;
+                    }
+                }
+            }
+            &2 {
+                & .swiper-slide {
+                    width: 568px;
+                    height: 283.485px;
+                    background-position: center;
+                    &-1 {
+                        background-image: url("../img/PC/modelsCar2.png");
+                        background-repeat: no-repeat;
+                    }
+                    &-2 {
+                        background-image: url("../img/PC/modelsCar2.png");
+                        background-repeat: no-repeat;
+                    }
+                    &-3 {
+                        background-image: url("../img/PC/modelsCar2.png");
+                        background-repeat: no-repeat;
+                    }
+                    &-4 {
+                        background-image: url("../img/PC/modelsCar2.png");
+                        background-repeat: no-repeat;
+                    }
+                    &-5 {
+                        background-image: url("../img/PC/modelsCar2.png");
+                        background-repeat: no-repeat;
+                    }
+                }
+            }
+            &3 {
+                & .swiper-slide {
+                    width: 568px;
+                    height: 308.596px;
+                    background-position: center;
+                    &-1 {
+                        background-image: url("../img/PC/modelsCar3.png");
+                        background-repeat: no-repeat;
+                    }
+                    &-2 {
+                        background-image: url("../img/PC/modelsCar3.png");
+                        background-repeat: no-repeat;
+                    }
+                    &-3 {
+                        background-image: url("../img/PC/modelsCar3.png");
+                        background-repeat: no-repeat;
+                    }
+                    &-4 {
+                        background-image: url("../img/PC/modelsCar3.png");
+                        background-repeat: no-repeat;
+                    }
+                    &-5 {
+                        background-image: url("../img/PC/modelsCar3.png");
+                        background-repeat: no-repeat;
+                    }
+                }
+            }
+        }
+    }
+}
+
 //промежуточный значения для более удобного адаптива
 @media (width<1180px) {
     .invisible__on-mobile {
@@ -168,7 +476,7 @@ html {
         display: block;
     }
     .container {
-        max-width: 90%;
+        max-width: 88.8%;
     }
     .active-burger {
         & > div:nth-child(1) {
@@ -182,6 +490,14 @@ html {
         display: block !important;
     }
     .header {
+        &__background {
+            background-image: linear-gradient(
+                    352deg,
+                    rgba(0, 0, 0, 0) 9.41%,
+                    #000 207.02%
+                ),
+                url("../img/Mobile/headerBgCar.png");
+        }
         &__content {
             &-top {
                 &-mobile {
@@ -192,7 +508,7 @@ html {
                     &-logo {
                         width: 112px;
                         height: 13.696px;
-                        background-image: url("/img/Mobile/headerLogo.png");
+                        background-image: url("../img/Mobile/headerLogo.png");
                         background-repeat: no-repeat;
                     }
                     &-phone {
@@ -274,19 +590,228 @@ html {
                     }
                 }
             }
+            &-text {
+                & h1 {
+                    max-width: 90%;
+                    margin-bottom: 30px;
+                    padding-top: 60px;
+                }
+                & h2 {
+                    max-width: 90%;
+                    margin-bottom: 70vh;
+                }
+                & button {
+                    width: 50%;
+                    margin-bottom: 35px;
+                    @include fontSW(16px, 500);
+                }
+            }
+        }
+    }
+    .timer {
+        &__content {
+            & button {
+                padding: 15px 41px;
+            }
+        }
+    }
+    .models {
+        margin-bottom: 40px;
+        & > h1 {
+            margin-top: 40px;
+            @include fontSW(24px, 700);
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        &__list {
+            max-width: 65%;
+            margin-bottom: 20px;
+            & .swiper-wrapper {
+                padding: 0 20%;
+            }
+            & .swiper-slide button {
+                @include fontSW(12px, 500);
+            }
+        }
+        &__cars {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            &-card {
+                grid-template-columns: 1fr;
+                background-position: 0px 14%;
+                &-title {
+                    grid-column: 1/4;
+                    grid-row: 1/2;
+                    & h1 {
+                        text-align: center;
+                        @include fontSW(20px, 500);
+                    }
+                    & div {
+                        margin-bottom: 30px;
+                        display: flex;
+                        flex-direction: column-reverse;
+                        gap: 3px;
+                        align-items: center;
+                        & h2 {
+                            @include fontSW(18px, 700);
+                        }
+                        & h3 {
+                            @include fontSW(14px, 700);
+                        }
+                    }
+                }
+                &-images {
+                    margin: 0 auto;
+                    max-width: 314px;
+
+                    & .swiper-pagination span {
+                        width: 20px;
+                        height: 20px;
+                    }
+                }
+                &-info {
+                    margin-top: 20px;
+                    grid-row: 3/4;
+                    & h1 {
+                        @include fontSW(12px, 500);
+                        height: 41px;
+                        background-image: url("../img/Mobile/modelsBGKasko.png");
+                        margin-bottom: 10px;
+                        background-size: 100%;
+                    }
+                    & ul {
+                        flex-direction: row;
+                        gap: 30px;
+                        margin-bottom: 23px;
+                        & li {
+                            flex-direction: column;
+                            gap: 2px;
+                            & p {
+                                text-align: center;
+                                @include fontSW(12px, 500);
+                            }
+                        }
+                    }
+                    &-svg {
+                        &1 {
+                            width: 20px;
+                            height: 20px;
+                            background-image: url("../img/Mobile/modelsList1.png");
+                        }
+                        &2 {
+                            width: 20px;
+                            height: 20px;
+                            background-image: url("../img/Mobile/modelsList2.png");
+                        }
+                        &3 {
+                            width: 20px;
+                            height: 21.72px;
+                            background-image: url("../img/Mobile/modelsList3.png");
+                        }
+                    }
+                }
+                &1 {
+                    & .swiper-slide {
+                        width: 314px;
+                        height: 171.486px;
+
+                        &-1 {
+                            background-image: url("../img/mobile/modelsCar1.png");
+                            background-repeat: no-repeat;
+                        }
+                        &-2 {
+                            background-image: url("../img/mobile/modelsCar1.png");
+                            background-repeat: no-repeat;
+                        }
+
+                        &-3 {
+                            background-image: url("../img/mobile/modelsCar1.png");
+                            background-repeat: no-repeat;
+                        }
+
+                        &-4 {
+                            background-image: url("../img/mobile/modelsCar1.png");
+                            background-repeat: no-repeat;
+                        }
+
+                        &-5 {
+                            background-image: url("../img/mobile/modelsCar1.png");
+                            background-repeat: no-repeat;
+                        }
+                    }
+                }
+                &2 {
+                    & .swiper-slide {
+                        width: 335px;
+                        height: 167.196px;
+
+                        &-1 {
+                            background-image: url("../img/mobile/modelsCar2.png");
+                            background-repeat: no-repeat;
+                        }
+                        &-2 {
+                            background-image: url("../img/mobile/modelsCar2.png");
+                            background-repeat: no-repeat;
+                        }
+
+                        &-3 {
+                            background-image: url("../img/mobile/modelsCar2.png");
+                            background-repeat: no-repeat;
+                        }
+
+                        &-4 {
+                            background-image: url("../img/mobile/modelsCar2.png");
+                            background-repeat: no-repeat;
+                        }
+
+                        &-5 {
+                            background-image: url("../img/mobile/modelsCar2.png");
+                            background-repeat: no-repeat;
+                        }
+                    }
+                }
+                &3 {
+                    & .swiper-slide {
+                        width: 335px;
+                        height: 182.007px;
+
+                        &-1 {
+                            background-image: url("../img/mobile/modelsCar3.png");
+                            background-repeat: no-repeat;
+                        }
+                        &-2 {
+                            background-image: url("../img/mobile/modelsCar3.png");
+                            background-repeat: no-repeat;
+                        }
+
+                        &-3 {
+                            background-image: url("../img/mobile/modelsCar3.png");
+                            background-repeat: no-repeat;
+                        }
+
+                        &-4 {
+                            background-image: url("../img/mobile/modelsCar3.png");
+                            background-repeat: no-repeat;
+                        }
+                        &-5 {
+                            background-image: url("../img/mobile/modelsCar3.png");
+                            background-repeat: no-repeat;
+                        }
+                    }
+                }
+            }
         }
     }
 }
 @media (width>768px) and (width<1180px) {
     .timer {
         &__content {
-            // text-align: center;
             grid-template-columns: 1fr 2fr;
-            justify-items: center;
             row-gap: 20px;
             & button {
-                // grid-row: ;
                 grid-column: 1/3;
+                justify-self: auto;
             }
         }
     }
@@ -295,14 +820,52 @@ html {
     .container {
         max-width: 88.8%;
     }
+    .header {
+        &__content {
+            &-text {
+                & h1 {
+                    max-width: 301px;
+                    @include fontSW(20px, 700);
+                    margin-bottom: 20px;
+                    padding-top: 60px;
+                }
+                & h2 {
+                    max-width: 304px;
+                    @include fontSW(15px, 400);
+                }
+                & button {
+                    width: 100%;
+                    @include fontSW(16px, 500);
+                    margin-bottom: 23px;
+                }
+            }
+        }
+    }
     .timer {
         &__content {
-            
             text-align: center;
             grid-template-columns: 1fr;
             justify-items: center;
             row-gap: 20px;
+            &-left {
+                & p {
+                    margin: 0 auto;
+                }
+            }
             & button {
+                margin-top: 15px;
+                justify-self: center;
+            }
+        }
+    }
+    .models {
+        &__list {
+            & .swiper-wrapper {
+                padding: 0 20px;
+            }
+        }
+        &__cars {
+            &-card {
             }
         }
     }

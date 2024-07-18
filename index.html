@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -18,11 +18,18 @@
             rel="stylesheet"
         />
         <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+        <!-- more fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Noto+Sans:wght@700&display=swap"
+            rel="stylesheet"
+        />
 
-        <link rel="apple-touch-icon-precomposed" href="/img/shortIcon.png" />
-        <link rel="icon" href="./img/shortIcon32.png" />
-        <link rel="stylesheet" href="./css/style.css" />
-        <script src="./script.js" defer></script>
+        <link rel="apple-touch-icon-precomposed" href="../img/shortIcon.png" />
+        <link rel="icon" href="../img/shortIcon32.png" />
+        <link rel="stylesheet" href="../css/style.css" />
+        <script src="../script.js" defer></script>
         <title>HAVAL</title>
     </head>
     <body>
@@ -119,16 +126,355 @@
                         <h2>до конца акции осталось:</h2>
                         <p>Успейте получить выгодное предложение</p>
                     </div>
-                    <div class="timer__content-center">
+                    <div class="timer__content-center invisible__on-mobile">
                         <script src="//megatimer.ru/get/eadfc0cba8ae381ca9094dd16154aba7.js"></script>
                     </div>
+                    <div class="timer__content-center-mobile invisible__on-pc">
+                        <script src="//megatimer.ru/get/6e523ca1a74ddafda2fb8f0f08bab39b.js"></script>
+                    </div>
                     <button>получить предложение</button>
-                    <!-- <div class="timer__content-right">
-                        <button>получить предложение</button>
-                    </div> -->
+                </div>
+            </section>
+            <section id="models" class="models container">
+                <h1>Модельный ряд</h1>
+                <div class="models__list">
+                    <div class="swiper-container mySwiper1">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><button>H9</button></div>
+                            <div class="swiper-slide">
+                                <button>JOLION</button>
+                            </div>
+                            <div class="swiper-slide"><button>M6</button></div>
+                            <div class="swiper-slide">
+                                <button>DARGO X</button>
+                            </div>
+                            <div class="swiper-slide"><button>F7</button></div>
+                            <div class="swiper-slide"><button>F7X</button></div>
+                        </div>
+                    </div>
+                    <div class="swiper-button-next swiper-button-next1"></div>
+                    <div class="swiper-button-prev swiper-button-prev1"></div>
+                </div>
+                <div class="models__cars">
+                    <div class="models__cars-card models__cars-card1">
+                        <div class="models__cars-card-title">
+                            <h1>HAVAL <span>JOLION</span></h1>
+                            <div>
+                                <h2>от 1 999 000 ₽</h2>
+                                <h3>2 500 000 ₽</h3>
+                            </div>
+                        </div>
+                        <div class="models__cars-card-images">
+                            <div
+                                class="swiper mySwiper2 models__cars-card-images-cars"
+                            >
+                                <div class="swiper-wrapper">
+                                    <div
+                                        class="swiper-slide swiper-slide-1"
+                                    ></div>
+                                    <div
+                                        class="swiper-slide swiper-slide-2"
+                                    ></div>
+                                    <div
+                                        class="swiper-slide swiper-slide-3"
+                                    ></div>
+                                    <div
+                                        class="swiper-slide swiper-slide-4"
+                                    ></div>
+                                    <div
+                                        class="swiper-slide swiper-slide-5"
+                                    ></div>
+                                </div>
+                                <div
+                                    class="swiper-pagination swiper-pagination1"
+                                ></div>
+                            </div>
+                        </div>
+                        <div class="models__cars-card-info">
+                            <h1>КАСКО в подарок</h1>
+                            <ul>
+                                <li>
+                                    <div
+                                        class="models__cars-card-info-svg models__cars-card-info-svg1"
+                                    ></div>
+                                    <p>Кредит от 4,9 %</p>
+                                </li>
+                                <li>
+                                    <div
+                                        class="models__cars-card-info-svg models__cars-card-info-svg2"
+                                    ></div>
+                                    <p>Первый взнос от 0 %</p>
+                                </li>
+                                <li>
+                                    <div
+                                        class="models__cars-card-info-svg models__cars-card-info-svg3"
+                                    ></div>
+                                    <p>Гарантия 5 лет</p>
+                                </li>
+                            </ul>
+                            <div class="models__cars-card-info-btns">
+                                <button class="models__cars-card-info-btns-1">
+                                    ПОЛУЧИТЬ ПРЕДЛОЖЕНИЕ
+                                </button>
+                                <button class="models__cars-card-info-btns-2">
+                                    в кредит от хх ххх ₽/мес
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="models__cars-card models__cars-card2">
+                        <div class="models__cars-card-title">
+                            <h1>HAVAL <span>F7X</span></h1>
+                            <div>
+                                <h2>от 2 449 000 ₽</h2>
+                                <h3>3 000 000 ₽</h3>
+                            </div>
+                        </div>
+                        <div class="models__cars-card-images">
+                            <div
+                                class="swiper mySwiper2 models__cars-card-images-cars"
+                            >
+                                <div class="swiper-wrapper">
+                                    <div
+                                        class="swiper-slide swiper-slide-1"
+                                    ></div>
+                                    <div
+                                        class="swiper-slide swiper-slide-2"
+                                    ></div>
+                                    <div
+                                        class="swiper-slide swiper-slide-3"
+                                    ></div>
+                                    <div
+                                        class="swiper-slide swiper-slide-4"
+                                    ></div>
+                                    <div
+                                        class="swiper-slide swiper-slide-5"
+                                    ></div>
+                                </div>
+                                <div
+                                    class="swiper-pagination swiper-pagination1"
+                                ></div>
+                            </div>
+                        </div>
+                        <div class="models__cars-card-info">
+                            <h1>КАСКО в подарок</h1>
+                            <ul>
+                                <li>
+                                    <div
+                                        class="models__cars-card-info-svg models__cars-card-info-svg1"
+                                    ></div>
+                                    <p>Кредит от 4,9 %</p>
+                                </li>
+                                <li>
+                                    <div
+                                        class="models__cars-card-info-svg models__cars-card-info-svg2"
+                                    ></div>
+                                    <p>Первый взнос от 0 %</p>
+                                </li>
+                                <li>
+                                    <div
+                                        class="models__cars-card-info-svg models__cars-card-info-svg3"
+                                    ></div>
+                                    <p>Гарантия 5 лет</p>
+                                </li>
+                            </ul>
+                            <div class="models__cars-card-info-btns">
+                                <button class="models__cars-card-info-btns-1">
+                                    ПОЛУЧИТЬ ПРЕДЛОЖЕНИЕ
+                                </button>
+                                <button class="models__cars-card-info-btns-2">
+                                    в кредит от хх ххх ₽/мес
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="models__cars-card models__cars-card3">
+                        <div class="models__cars-card-title">
+                            <h1>HAVAL <span>F7X</span></h1>
+                            <div>
+                                <h2>от 2 449 000 ₽</h2>
+                                <h3>3 000 000 ₽</h3>
+                            </div>
+                        </div>
+                        <div class="models__cars-card-images">
+                            <div
+                                class="swiper mySwiper2 models__cars-card-images-cars"
+                            >
+                                <div class="swiper-wrapper">
+                                    <div
+                                        class="swiper-slide swiper-slide-1"
+                                    ></div>
+                                    <div
+                                        class="swiper-slide swiper-slide-2"
+                                    ></div>
+                                    <div
+                                        class="swiper-slide swiper-slide-3"
+                                    ></div>
+                                    <div
+                                        class="swiper-slide swiper-slide-4"
+                                    ></div>
+                                    <div
+                                        class="swiper-slide swiper-slide-5"
+                                    ></div>
+                                </div>
+                                <div
+                                    class="swiper-pagination swiper-pagination1"
+                                ></div>
+                            </div>
+                        </div>
+                        <div class="models__cars-card-info">
+                            <h1>КАСКО в подарок</h1>
+                            <ul>
+                                <li>
+                                    <div
+                                        class="models__cars-card-info-svg models__cars-card-info-svg1"
+                                    ></div>
+                                    <p>Кредит от 4,9 %</p>
+                                </li>
+                                <li>
+                                    <div
+                                        class="models__cars-card-info-svg models__cars-card-info-svg2"
+                                    ></div>
+                                    <p>Первый взнос от 0 %</p>
+                                </li>
+                                <li>
+                                    <div
+                                        class="models__cars-card-info-svg models__cars-card-info-svg3"
+                                    ></div>
+                                    <p>Гарантия 5 лет</p>
+                                </li>
+                            </ul>
+                            <div class="models__cars-card-info-btns">
+                                <button class="models__cars-card-info-btns-1">
+                                    ПОЛУЧИТЬ ПРЕДЛОЖЕНИЕ
+                                </button>
+                                <button class="models__cars-card-info-btns-2">
+                                    в кредит от хх ххх ₽/мес
+                                </button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
         </main>
-        <footer></footer>
+        <footer>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque
+            nobis error porro numquam, iste omnis perspiciatis deleniti iusto
+            voluptatibus, excepturi possimus voluptatum beatae nihil
+            exercitationem minus quam nisi a id. Illum maxime iusto dolore
+            fugiat at ratione ipsum, et quia totam eligendi cupiditate, dicta
+            corporis recusandae. Nisi facilis rem pariatur nobis deleniti sed
+            voluptatibus voluptatem. Quasi consectetur tempora eum, deleniti
+            voluptas veritatis doloribus inventore dignissimos ut obcaecati qui
+            quos iusto ducimus adipisci facilis harum sed dicta dolorum natus.
+            Architecto provident eos, temporibus at nostrum molestias, magnam,
+            suscipit similique necessitatibus aliquam quis explicabo harum! Ut
+            repellat molestiae a minima nihil vel ea est, expedita doloremque
+            eveniet distinctio debitis consequatur deserunt animi totam odit,
+            assumenda excepturi labore natus blanditiis corporis cumque
+            laudantium porro? Debitis exercitationem esse tenetur, beatae odit
+            cupiditate, corrupti voluptates assumenda veniam hic neque
+            architecto, animi voluptatum! Qui, adipisci! Amet modi officia quam
+            voluptatem, impedit cupiditate dolorem doloremque? Culpa, dolor
+            autem. Aperiam odio cum porro quidem vel illo, obcaecati culpa
+            repellat quae in aut asperiores, iusto quia commodi ullam sint
+            accusantium optio quibusdam, alias reiciendis natus quos eius
+            dolorum! Eaque perspiciatis eos, quod quis saepe quos cumque atque
+            nulla vero exercitationem omnis deserunt sint maiores magnam, nemo
+            itaque deleniti repellat recusandae illo necessitatibus sunt numquam
+            adipisci voluptatem. Nobis, a voluptatem. Quaerat esse soluta
+            perspiciatis porro nemo dolorem modi velit unde reiciendis aut
+            aliquam provident illo itaque exercitationem a hic blanditiis ea,
+            explicabo inventore rem ullam sit laboriosam quam. Ea, assumenda
+            molestiae sapiente quod maiores iusto, hic nostrum consequatur eaque
+            placeat atque. Perferendis, magnam impedit porro sit eveniet
+            delectus quod accusamus reprehenderit consequatur qui distinctio
+            natus, repellat esse, tempore fugiat sint aspernatur repudiandae est
+            ipsum corporis quaerat commodi? Magni ipsum delectus harum hic,
+            quisquam aliquid sit libero tempora, aspernatur itaque consequatur
+            ab sapiente error laboriosam eos blanditiis veniam officia doloribus
+            dolores? A hic fugiat similique sint itaque! Aperiam nobis veniam
+            vitae praesentium minima nam dicta, atque tempore animi, adipisci
+            quo qui aliquam sint, pariatur maxime? Labore aliquam ex expedita
+            ipsum veritatis iure minima, voluptatum iusto, officia assumenda
+            veniam velit? Illum, distinctio. Quas, quis qui. Commodi quibusdam
+            obcaecati modi voluptas quos mollitia ab at pariatur consequatur, in
+            inventore tempore ad iusto quia minima iste recusandae sed
+            molestiae. Impedit corporis quod quo! Dolorem animi numquam ratione
+            incidunt natus odit non eum alias, corporis expedita doloribus eos
+            magnam vero earum. Accusantium, doloremque deserunt veritatis
+            praesentium illum eum fuga odit saepe nulla hic iusto delectus quae
+            ipsam inventore soluta reiciendis quisquam dicta libero
+            necessitatibus consectetur nostrum commodi quod? Aliquid consectetur
+            similique, unde repellendus dolorem sequi iste. Sequi dignissimos,
+            odio dicta tempore, sunt blanditiis perferendis odit animi corporis
+            facilis labore tenetur quidem voluptatibus molestias autem at? Et,
+            quaerat. A aliquam illum quaerat placeat sapiente rem asperiores
+            facere qui, quos quam error eveniet natus sequi perferendis eaque
+            tempore eos? Libero voluptas quos nihil, blanditiis perferendis
+            reprehenderit ratione quis nemo excepturi dolor quia adipisci aut
+            ipsum, hic commodi consequuntur voluptatum cum illum ipsam ex? Enim
+            non magnam, aliquam totam qui quasi sit iste eaque incidunt
+            inventore expedita dolore. Adipisci placeat voluptatibus eum quasi.
+            Nobis, voluptatem eius vel eveniet quam natus minima rerum illum
+            maxime fuga nesciunt consequatur eos voluptatum et dolor blanditiis
+            magni doloremque cum id deleniti laudantium corrupti dolorem veniam
+            qui. Veniam ab fugiat, voluptatem voluptates quisquam soluta, hic
+            voluptate praesentium excepturi consequatur tenetur magni autem
+            incidunt a assumenda repudiandae fuga tempora consequuntur at quasi
+            dolore molestias quod distinctio! Tempore ducimus distinctio
+            reiciendis unde. Aliquam dignissimos omnis voluptatum laborum
+            cumque, incidunt totam cum? Labore impedit quo voluptatum sint ipsa
+            quaerat iure blanditiis pariatur consectetur reprehenderit fugiat
+            atque porro, enim ipsum tenetur excepturi aliquid, nam natus? Totam
+            doloribus molestias nam molestiae mollitia autem velit, quaerat
+            itaque enim explicabo necessitatibus modi distinctio exercitationem
+            dolore rerum inventore, harum quasi. Nesciunt distinctio
+            voluptatibus, corrupti adipisci numquam deserunt non omnis est ipsam
+            ducimus veritatis tempore nisi voluptate inventore quam! Quas ullam
+            labore deleniti odit eos accusantium quo facere, facilis cupiditate
+            error sequi! Non omnis cum sit a ab iusto modi accusantium
+            reiciendis natus, id unde earum eos sapiente saepe qui tempora rerum
+            asperiores corrupti soluta itaque? Debitis, provident commodi sequi
+            tenetur libero deserunt beatae fugit error tempora hic omnis sint
+            temporibus maiores vitae esse expedita nostrum nemo incidunt
+            sapiente reiciendis? Totam, laborum voluptatem fugit laudantium
+            aspernatur natus magnam officiis? Expedita, quam? Ratione
+            accusantium amet quis eos eveniet deserunt explicabo nostrum
+            inventore atque sit, veniam vitae, illo recusandae quam reiciendis
+            iure accusamus repellendus odio! Doloribus recusandae consequuntur,
+            minima sit incidunt commodi? Vero voluptatibus ullam nesciunt!
+            Explicabo tenetur nemo aperiam libero ea odit numquam, repellat quis
+            adipisci modi nesciunt consequatur sunt voluptatibus, aliquid cum
+            ducimus tempore illum officia consectetur. Neque delectus mollitia
+            labore id dicta placeat officiis, ipsum voluptatibus maiores totam
+            quo consequuntur deserunt, inventore ipsa minima dolorum pariatur
+            recusandae perspiciatis. Saepe ipsa, quidem iure minus cumque rem
+            necessitatibus ducimus! Dignissimos vero cumque excepturi velit
+            exercitationem omnis, officiis enim necessitatibus in dolorem
+            aliquid ipsum minima dolores ad tempore sit? Dolorem doloremque
+            veniam totam porro officia, fugiat reprehenderit excepturi at.
+            Labore quo recusandae sequi atque porro eaque eius incidunt mollitia
+            rerum ad. Rem earum quam dolorum nobis laborum, et, hic debitis
+            sequi eum, facere odio excepturi! Provident praesentium nostrum
+            eligendi sunt consequuntur voluptates, corporis officia et deleniti
+            suscipit deserunt ut. Impedit ipsa neque ad dicta similique, totam
+            soluta nihil unde ab nemo accusantium vel dignissimos quis
+            laudantium asperiores accusamus voluptatum delectus, pariatur
+            consectetur quam molestias itaque. Nostrum repudiandae ipsa quaerat
+            velit nesciunt repellat vitae dolore qui architecto cum dolores,
+            sint aliquid esse explicabo sequi illo magnam eos nihil. Ex, eum
+            dolorum! Ut quos rem in, tempore, fuga beatae et esse omnis at dolor
+            nulla autem ea quod inventore voluptatum saepe quam, eius impedit
+            eum. Quas totam fuga asperiores quibusdam officia reprehenderit
+            dolorum et eaque facilis cupiditate, repudiandae voluptatum
+            aspernatur adipisci exercitationem. Minus distinctio odio amet
+            reprehenderit nesciunt esse dignissimos at consequatur? Quaerat
+            soluta, tenetur, blanditiis optio sequi distinctio nihil,
+            repellendus quis nemo nesciunt debitis harum maiores minus fuga
+            corporis fugiat illo. Eos veritatis quos ipsam dolores, libero
+            accusantium aperiam. Totam, assumenda. Amet quis ratione
+            reprehenderit.
+        </footer>
     </body>
 </html>

@@ -41,3 +41,44 @@ btnFromNavMenuMobile.addEventListener("click", () => {
     navigationMenuMobile.classList.remove("active-menu");
     document.querySelector("body").style.overflow = "scroll";
 });
+
+//Swipers
+var swiper = new Swiper(".mySwiper1", {
+    slidesPerView: 6,
+    spaceBetween: 100,
+    loop: true,
+    // centeredSlides: true,
+    navigation: {
+        nextEl: ".swiper-button-next1",
+        prevEl: ".swiper-button-prev1",
+    },
+    breakpoints: {
+        320: {
+            slidesPerView: 4,
+            spaceBetween: 35,
+        },
+        768: {
+            spaceBetween: 40,
+        },
+        1180: {
+            slidesPerView: 6,
+            spaceBetween: 100,
+        },
+    },
+});
+
+let carsColorSwiper = document.querySelectorAll(
+    ".models__cars-card-images .mySwiper2"
+);
+
+carsColorSwiper.forEach((card) => {
+    var swiper = new Swiper(card, {
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+            renderBullet: function (index, className) {
+                return '<span class="' + className + '">' + "</span>";
+            },
+        },
+    });
+});
