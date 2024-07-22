@@ -25,11 +25,16 @@
             href="https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Noto+Sans:wght@700&display=swap"
             rel="stylesheet"
         />
+        <!-- Яндекс.Карты -->
+        <script
+            src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=abfd8990-465b-47e8-8212-02f21bcf1df1"
+            type="text/javascript"
+        ></script>
 
-        <link rel="apple-touch-icon-precomposed" href="../img/shortIcon.png" />
-        <link rel="icon" href="../img/shortIcon32.png" />
-        <link rel="stylesheet" href="../css/style.css" />
-        <script src="../script.js" defer></script>
+        <link rel="apple-touch-icon-precomposed" href="./img/shortIcon.png" />
+        <link rel="icon" href="./img/shortIcon32.png" />
+        <link rel="stylesheet" href="./css/style.css" />
+        <script src="./script.js" defer></script>
         <title>HAVAL</title>
     </head>
     <body>
@@ -170,19 +175,29 @@
                             >
                                 <div class="swiper-wrapper">
                                     <div
-                                        class="swiper-slide swiper-slide-1"
+                                        class="swiper-slide swiper-slide-1 lazy-loading"
+                                        data-bg="../img/PC/modelsCar1.png"
+                                        data-bgmob="../img/mobile/modelsCar1.png"
                                     ></div>
                                     <div
-                                        class="swiper-slide swiper-slide-2"
+                                        class="swiper-slide swiper-slide-2 lazy-loading"
+                                        data-bg="../img/PC/modelsCar1.png"
+                                        data-bgmob="../img/mobile/modelsCar1.png"
                                     ></div>
                                     <div
-                                        class="swiper-slide swiper-slide-3"
+                                        class="swiper-slide swiper-slide-3 lazy-loading"
+                                        data-bg="../img/PC/modelsCar1.png"
+                                        data-bgmob="../img/mobile/modelsCar1.png"
                                     ></div>
                                     <div
-                                        class="swiper-slide swiper-slide-4"
+                                        class="swiper-slide swiper-slide-4 lazy-loading"
+                                        data-bg="../img/PC/modelsCar1.png"
+                                        data-bgmob="../img/mobile/modelsCar1.png"
                                     ></div>
                                     <div
-                                        class="swiper-slide swiper-slide-5"
+                                        class="swiper-slide swiper-slide-5 lazy-loading"
+                                        data-bg="../img/PC/modelsCar1.png"
+                                        data-bgmob="../img/mobile/modelsCar1.png"
                                     ></div>
                                 </div>
                                 <div
@@ -236,19 +251,29 @@
                             >
                                 <div class="swiper-wrapper">
                                     <div
-                                        class="swiper-slide swiper-slide-1"
+                                        class="swiper-slide swiper-slide-1 lazy-loading"
+                                        data-bg="../img/PC/modelsCar2.png"
+                                        data-bgmob="../img/mobile/modelsCar2.png"
                                     ></div>
                                     <div
-                                        class="swiper-slide swiper-slide-2"
+                                        class="swiper-slide swiper-slide-2 lazy-loading"
+                                        data-bg="../img/PC/modelsCar2.png"
+                                        data-bgmob="../img/mobile/modelsCar2.png"
                                     ></div>
                                     <div
-                                        class="swiper-slide swiper-slide-3"
+                                        class="swiper-slide swiper-slide-3 lazy-loading"
+                                        data-bg="../img/PC/modelsCar2.png"
+                                        data-bgmob="../img/mobile/modelsCar2.png"
                                     ></div>
                                     <div
-                                        class="swiper-slide swiper-slide-4"
+                                        class="swiper-slide swiper-slide-4 lazy-loading"
+                                        data-bg="../img/PC/modelsCar2.png"
+                                        data-bgmob="../img/mobile/modelsCar2.png"
                                     ></div>
                                     <div
-                                        class="swiper-slide swiper-slide-5"
+                                        class="swiper-slide swiper-slide-5 lazy-loading"
+                                        data-bg="../img/PC/modelsCar2.png"
+                                        data-bgmob="../img/mobile/modelsCar2.png"
                                     ></div>
                                 </div>
                                 <div
@@ -302,19 +327,29 @@
                             >
                                 <div class="swiper-wrapper">
                                     <div
-                                        class="swiper-slide swiper-slide-1"
+                                        class="swiper-slide swiper-slide-1 lazy-loading"
+                                        data-bg="../img/PC/modelsCar3.png"
+                                        data-bgmob="../img/mobile/modelsCar3.png"
                                     ></div>
                                     <div
-                                        class="swiper-slide swiper-slide-2"
+                                        class="swiper-slide swiper-slide-2 lazy-loading"
+                                        data-bg="../img/PC/modelsCar3.png"
+                                        data-bgmob="../img/mobile/modelsCar3.png"
                                     ></div>
                                     <div
-                                        class="swiper-slide swiper-slide-3"
+                                        class="swiper-slide swiper-slide-3 lazy-loading"
+                                        data-bg="../img/PC/modelsCar3.png"
+                                        data-bgmob="../img/mobile/modelsCar3.png"
                                     ></div>
                                     <div
-                                        class="swiper-slide swiper-slide-4"
+                                        class="swiper-slide swiper-slide-4 lazy-loading"
+                                        data-bg="../img/PC/modelsCar3.png"
+                                        data-bgmob="../img/mobile/modelsCar3.png"
                                     ></div>
                                     <div
-                                        class="swiper-slide swiper-slide-5"
+                                        class="swiper-slide swiper-slide-5 lazy-loading"
+                                        data-bg="../img/PC/modelsCar3.png"
+                                        data-bgmob="../img/mobile/modelsCar3.png"
                                     ></div>
                                 </div>
                                 <div
@@ -356,125 +391,385 @@
                     </div>
                 </div>
             </section>
+            <section class="configurations">
+                <h1 class="container">Комплектации</h1>
+                <div class="configurations__filters">
+                    <select
+                        name="models"
+                        id="mySelect1"
+                        class="configurations__filters-1"
+                    >
+                        <option
+                            class="configurations__filters-1-selected"
+                            selected
+                            disabled
+                        >
+                            МОДЕЛЬ
+                        </option>
+                        <option
+                            class="configurations__filters-1-selected"
+                            value="JOLION"
+                        >
+                            JOLION
+                        </option>
+                        <option
+                            class="configurations__filters-1-selected"
+                            value="F7X"
+                        >
+                            F7X
+                        </option>
+                        <option
+                            class="configurations__filters-1-selected"
+                            value="DARGO"
+                        >
+                            DARGO
+                        </option>
+                    </select>
+                    <select
+                        name="configurations"
+                        class="configurations__filters-2"
+                    >
+                        <option selected disabled>КОМПЛЕКТАЦИЯ</option>
+                        <option value="1.5MTActive">1.5 MT Active</option>
+                        <option value="1.5MTActive">1.6 MT Active</option>
+                        <option value="1.5MTActive">1.7 MT Active</option>
+                        <option value="1.5MTActive">1.8 MT Active</option>
+                        <option value="1.5MTActive">1.9 MT Active</option>
+                    </select>
+                </div>
+                <h2 class="configurations__info container">Модель</h2>
+                <div class="configurations__list">
+                    <div
+                        class="configurations__list-content configurations__list-content-1"
+                    >
+                        <div
+                            class="configurations__list-item configurations__list-item-1 container"
+                        >
+                            <button class="configurations__list-item-config">
+                                <h3>1.5 MT Active</h3>
+                                <div
+                                    class="configurations__list-item-config-arrow"
+                                ></div>
+                            </button>
+                            <h2>150 л.с./передний/МКПП 5</h2>
+                            <h3>от 99 999₽/мес.</h3>
+                            <div class="configurations__list-item-price">
+                                <h4>2 885 000 ₽</h4>
+                                <h5>от 1 999 999₽</h5>
+                            </div>
+                            <div class="configurations__list-item-btns">
+                                <button class="configurations__list-item-btns1">
+                                    рассчитать кредит
+                                </button>
+                                <button class="configurations__list-item-btns2">
+                                    зафиксировать цену
+                                </button>
+                            </div>
+                        </div>
+                        <div
+                            class="configurations__list-item-info disableArrow container"
+                        >
+                            <div class="configurations__list-item-info1">
+                                <h3>экстерьер и внешнее оснащение</h3>
+                                <ul>
+                                    <li>123</li>
+                                    <li>123</li>
+                                    <li>123</li>
+                                    <li>123</li>
+                                    <li>123</li>
+                                    <li>
+                                        Lorem ipsum dolor sit, amet consectetur
+                                        adipisicing elit. Possimus, quia?
+                                    </li>
+                                    <li>qwe</li>
+                                    <li>привет</li>
+                                    <li>
+                                        Lorem ipsum dolor sit amet consectetur
+                                        adipisicing elit. Voluptatem, quae quam
+                                        cupiditate unde molestias inventore amet
+                                        ea omnis dolores dolorum.
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="configurations__list-item-info2">
+                                <h3>внутреннее оснащение</h3>
+                                <ul>
+                                    <li>123</li>
+                                    <li>123</li>
+                                    <li>123</li>
+                                    <li>123</li>
+                                    <li>123</li>
+                                </ul>
+                            </div>
+                            <div class="configurations__list-item-info3">
+                                <h3>
+                                    активные и пассивные системы безопасности
+                                </h3>
+                                <ul>
+                                    <li>123</li>
+                                    <li>123</li>
+                                    <li>123</li>
+                                    <li>123</li>
+                                    <li>123</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="configurations__list-content configurations__list-content-1"
+                    >
+                        <div
+                            class="configurations__list-item configurations__list-item-1 container"
+                        >
+                            <button class="configurations__list-item-config">
+                                <h3>1.5 MT Active</h3>
+                                <div
+                                    class="configurations__list-item-config-arrow"
+                                ></div>
+                            </button>
+                            <h2>150 л.с./передний/МКПП 5</h2>
+                            <h3>от 99 999₽/мес.</h3>
+                            <div class="configurations__list-item-price">
+                                <h4>2 885 000 ₽</h4>
+                                <h5>от 1 999 999₽</h5>
+                            </div>
+                            <div class="configurations__list-item-btns">
+                                <button class="configurations__list-item-btns1">
+                                    рассчитать кредит
+                                </button>
+                                <button class="configurations__list-item-btns2">
+                                    зафиксировать цену
+                                </button>
+                            </div>
+                        </div>
+                        <div
+                            class="configurations__list-item-info disableArrow container"
+                        >
+                            <div class="configurations__list-item-info1">
+                                <h3>экстерьер и внешнее оснащение</h3>
+                                <ul>
+                                    <li>123</li>
+                                    <li>123</li>
+                                    <li>123</li>
+                                    <li>123</li>
+                                    <li>123</li>
+                                    <li>
+                                        Lorem ipsum dolor sit, amet consectetur
+                                        adipisicing elit. Possimus, quia?
+                                    </li>
+                                    <li>qwe</li>
+                                    <li>привет</li>
+                                    <li>
+                                        Lorem ipsum dolor sit amet consectetur
+                                        adipisicing elit. Voluptatem, quae quam
+                                        cupiditate unde molestias inventore amet
+                                        ea omnis dolores dolorum.
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="configurations__list-item-info2">
+                                <h3>внутреннее оснащение</h3>
+                                <ul>
+                                    <li>123</li>
+                                    <li>123</li>
+                                    <li>123</li>
+                                    <li>123</li>
+                                    <li>123</li>
+                                </ul>
+                            </div>
+                            <div class="configurations__list-item-info3">
+                                <h3>
+                                    активные и пассивные системы безопасности
+                                </h3>
+                                <ul>
+                                    <li>123</li>
+                                    <li>123</li>
+                                    <li>123</li>
+                                    <li>123</li>
+                                    <li>123</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="configurations__list-content configurations__list-content-1"
+                    >
+                        <div
+                            class="configurations__list-item configurations__list-item-1 container"
+                        >
+                            <button class="configurations__list-item-config">
+                                <h3>1.5 MT Active</h3>
+                                <div class="configurations__list-item-config-arrow">
+
+                                </div>
+                            </button>
+                            <h2>150 л.с./передний/МКПП 5</h2>
+                            <h3>от 99 999₽/мес.</h3>
+                            <div class="configurations__list-item-price">
+                                <h4>2 885 000 ₽</h4>
+                                <h5>от 1 999 999₽</h5>
+                            </div>
+                            <div class="configurations__list-item-btns">
+                                <button class="configurations__list-item-btns1">
+                                    рассчитать кредит
+                                </button>
+                                <button class="configurations__list-item-btns2">
+                                    зафиксировать цену
+                                </button>
+                            </div>
+                        </div>
+                        <div
+                            class="configurations__list-item-info disableArrow container"
+                        >
+                            <div class="configurations__list-item-info1">
+                                <h3>экстерьер и внешнее оснащение</h3>
+                                <ul>
+                                    <li>123</li>
+                                    <li>123</li>
+                                    <li>123</li>
+                                    <li>123</li>
+                                    <li>123</li>
+                                    <li>
+                                        Lorem ipsum dolor sit, amet consectetur
+                                        adipisicing elit. Possimus, quia?
+                                    </li>
+                                    <li>qwe</li>
+                                    <li>привет</li>
+                                    <li>
+                                        Lorem ipsum dolor sit amet consectetur
+                                        adipisicing elit. Voluptatem, quae quam
+                                        cupiditate unde molestias inventore amet
+                                        ea omnis dolores dolorum.
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="configurations__list-item-info2">
+                                <h3>внутреннее оснащение</h3>
+                                <ul>
+                                    <li>123</li>
+                                    <li>123</li>
+                                    <li>123</li>
+                                    <li>123</li>
+                                    <li>123</li>
+                                </ul>
+                            </div>
+                            <div class="configurations__list-item-info3">
+                                <h3>
+                                    активные и пассивные системы безопасности
+                                </h3>
+                                <ul>
+                                    <li>123</li>
+                                    <li>123</li>
+                                    <li>123</li>
+                                    <li>123</li>
+                                    <li>123</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="credit">
+                <div
+                    class="credit__content lazy-loading"
+                    data-bg="../img/PC/creditBGColor.png"
+                    data-bgmob="../img/Mobile/creditBGColor.png"
+                >
+                    <div class="credit__content-text container">
+                        <h2>автокредит</h2>
+                        <p>
+                            Дополнительная выгода 70.000 ₽ при покупке в кредит
+                        </p>
+                        <button>Рассчитать кредит</button>
+                    </div>
+                </div>
+                <div
+                    class="credit__image lazy-loading"
+                    data-bg="../img/PC/creditBGCar.png"
+                    data-bgmob="../img/Mobile/creditBGCar.png"
+                ></div>
+            </section>
+            <section class="tradein">
+                <div
+                    class="tradein__image lazy-loading"
+                    data-bg="../img/PC/tradeInBgCar.png"
+                    data-bgmob="../img/Mobile/tradeInBGCar.png"
+                ></div>
+                <div
+                    class="tradein__content lazy-loading"
+                    data-bg="../img/PC/tradeInBgColor.png"
+                    data-bgmob="../img/Mobile/creditBGColor.png"
+                >
+                    <div class="tradein__content-text container">
+                        <h2>trade-in</h2>
+                        <p>
+                            Обменяйте свой автомобиль на свой новый HAVAL с
+                            выгодой до 300 000 ₽
+                        </p>
+                        <button>Оформить Trade-In</button>
+                    </div>
+                </div>
+            </section>
+            <section class="contacts">
+                <h2 class="container">контакты</h2>
+                <div class="contacts__map" id="map"></div>
+                <div class="contacts__content container">
+                    <h2>
+                        Адрес:
+                        <p class="contacts__content-text">
+                            г. Москва, 27 км МКАД (внешняя сторона)
+                        </p>
+                    </h2>
+                    <h2>
+                        Телефон:
+                        <a href="tel:+7 (495) 320-89-99">+7 (495) 320-89-99</a>
+                    </h2>
+                    <h2>
+                        Режим работы:
+                        <p>Пн-Вс с 8:00 до 22:00</p>
+                    </h2>
+                    <button>Заказать звонок</button>
+                </div>
+            </section>
         </main>
         <footer>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque
-            nobis error porro numquam, iste omnis perspiciatis deleniti iusto
-            voluptatibus, excepturi possimus voluptatum beatae nihil
-            exercitationem minus quam nisi a id. Illum maxime iusto dolore
-            fugiat at ratione ipsum, et quia totam eligendi cupiditate, dicta
-            corporis recusandae. Nisi facilis rem pariatur nobis deleniti sed
-            voluptatibus voluptatem. Quasi consectetur tempora eum, deleniti
-            voluptas veritatis doloribus inventore dignissimos ut obcaecati qui
-            quos iusto ducimus adipisci facilis harum sed dicta dolorum natus.
-            Architecto provident eos, temporibus at nostrum molestias, magnam,
-            suscipit similique necessitatibus aliquam quis explicabo harum! Ut
-            repellat molestiae a minima nihil vel ea est, expedita doloremque
-            eveniet distinctio debitis consequatur deserunt animi totam odit,
-            assumenda excepturi labore natus blanditiis corporis cumque
-            laudantium porro? Debitis exercitationem esse tenetur, beatae odit
-            cupiditate, corrupti voluptates assumenda veniam hic neque
-            architecto, animi voluptatum! Qui, adipisci! Amet modi officia quam
-            voluptatem, impedit cupiditate dolorem doloremque? Culpa, dolor
-            autem. Aperiam odio cum porro quidem vel illo, obcaecati culpa
-            repellat quae in aut asperiores, iusto quia commodi ullam sint
-            accusantium optio quibusdam, alias reiciendis natus quos eius
-            dolorum! Eaque perspiciatis eos, quod quis saepe quos cumque atque
-            nulla vero exercitationem omnis deserunt sint maiores magnam, nemo
-            itaque deleniti repellat recusandae illo necessitatibus sunt numquam
-            adipisci voluptatem. Nobis, a voluptatem. Quaerat esse soluta
-            perspiciatis porro nemo dolorem modi velit unde reiciendis aut
-            aliquam provident illo itaque exercitationem a hic blanditiis ea,
-            explicabo inventore rem ullam sit laboriosam quam. Ea, assumenda
-            molestiae sapiente quod maiores iusto, hic nostrum consequatur eaque
-            placeat atque. Perferendis, magnam impedit porro sit eveniet
-            delectus quod accusamus reprehenderit consequatur qui distinctio
-            natus, repellat esse, tempore fugiat sint aspernatur repudiandae est
-            ipsum corporis quaerat commodi? Magni ipsum delectus harum hic,
-            quisquam aliquid sit libero tempora, aspernatur itaque consequatur
-            ab sapiente error laboriosam eos blanditiis veniam officia doloribus
-            dolores? A hic fugiat similique sint itaque! Aperiam nobis veniam
-            vitae praesentium minima nam dicta, atque tempore animi, adipisci
-            quo qui aliquam sint, pariatur maxime? Labore aliquam ex expedita
-            ipsum veritatis iure minima, voluptatum iusto, officia assumenda
-            veniam velit? Illum, distinctio. Quas, quis qui. Commodi quibusdam
-            obcaecati modi voluptas quos mollitia ab at pariatur consequatur, in
-            inventore tempore ad iusto quia minima iste recusandae sed
-            molestiae. Impedit corporis quod quo! Dolorem animi numquam ratione
-            incidunt natus odit non eum alias, corporis expedita doloribus eos
-            magnam vero earum. Accusantium, doloremque deserunt veritatis
-            praesentium illum eum fuga odit saepe nulla hic iusto delectus quae
-            ipsam inventore soluta reiciendis quisquam dicta libero
-            necessitatibus consectetur nostrum commodi quod? Aliquid consectetur
-            similique, unde repellendus dolorem sequi iste. Sequi dignissimos,
-            odio dicta tempore, sunt blanditiis perferendis odit animi corporis
-            facilis labore tenetur quidem voluptatibus molestias autem at? Et,
-            quaerat. A aliquam illum quaerat placeat sapiente rem asperiores
-            facere qui, quos quam error eveniet natus sequi perferendis eaque
-            tempore eos? Libero voluptas quos nihil, blanditiis perferendis
-            reprehenderit ratione quis nemo excepturi dolor quia adipisci aut
-            ipsum, hic commodi consequuntur voluptatum cum illum ipsam ex? Enim
-            non magnam, aliquam totam qui quasi sit iste eaque incidunt
-            inventore expedita dolore. Adipisci placeat voluptatibus eum quasi.
-            Nobis, voluptatem eius vel eveniet quam natus minima rerum illum
-            maxime fuga nesciunt consequatur eos voluptatum et dolor blanditiis
-            magni doloremque cum id deleniti laudantium corrupti dolorem veniam
-            qui. Veniam ab fugiat, voluptatem voluptates quisquam soluta, hic
-            voluptate praesentium excepturi consequatur tenetur magni autem
-            incidunt a assumenda repudiandae fuga tempora consequuntur at quasi
-            dolore molestias quod distinctio! Tempore ducimus distinctio
-            reiciendis unde. Aliquam dignissimos omnis voluptatum laborum
-            cumque, incidunt totam cum? Labore impedit quo voluptatum sint ipsa
-            quaerat iure blanditiis pariatur consectetur reprehenderit fugiat
-            atque porro, enim ipsum tenetur excepturi aliquid, nam natus? Totam
-            doloribus molestias nam molestiae mollitia autem velit, quaerat
-            itaque enim explicabo necessitatibus modi distinctio exercitationem
-            dolore rerum inventore, harum quasi. Nesciunt distinctio
-            voluptatibus, corrupti adipisci numquam deserunt non omnis est ipsam
-            ducimus veritatis tempore nisi voluptate inventore quam! Quas ullam
-            labore deleniti odit eos accusantium quo facere, facilis cupiditate
-            error sequi! Non omnis cum sit a ab iusto modi accusantium
-            reiciendis natus, id unde earum eos sapiente saepe qui tempora rerum
-            asperiores corrupti soluta itaque? Debitis, provident commodi sequi
-            tenetur libero deserunt beatae fugit error tempora hic omnis sint
-            temporibus maiores vitae esse expedita nostrum nemo incidunt
-            sapiente reiciendis? Totam, laborum voluptatem fugit laudantium
-            aspernatur natus magnam officiis? Expedita, quam? Ratione
-            accusantium amet quis eos eveniet deserunt explicabo nostrum
-            inventore atque sit, veniam vitae, illo recusandae quam reiciendis
-            iure accusamus repellendus odio! Doloribus recusandae consequuntur,
-            minima sit incidunt commodi? Vero voluptatibus ullam nesciunt!
-            Explicabo tenetur nemo aperiam libero ea odit numquam, repellat quis
-            adipisci modi nesciunt consequatur sunt voluptatibus, aliquid cum
-            ducimus tempore illum officia consectetur. Neque delectus mollitia
-            labore id dicta placeat officiis, ipsum voluptatibus maiores totam
-            quo consequuntur deserunt, inventore ipsa minima dolorum pariatur
-            recusandae perspiciatis. Saepe ipsa, quidem iure minus cumque rem
-            necessitatibus ducimus! Dignissimos vero cumque excepturi velit
-            exercitationem omnis, officiis enim necessitatibus in dolorem
-            aliquid ipsum minima dolores ad tempore sit? Dolorem doloremque
-            veniam totam porro officia, fugiat reprehenderit excepturi at.
-            Labore quo recusandae sequi atque porro eaque eius incidunt mollitia
-            rerum ad. Rem earum quam dolorum nobis laborum, et, hic debitis
-            sequi eum, facere odio excepturi! Provident praesentium nostrum
-            eligendi sunt consequuntur voluptates, corporis officia et deleniti
-            suscipit deserunt ut. Impedit ipsa neque ad dicta similique, totam
-            soluta nihil unde ab nemo accusantium vel dignissimos quis
-            laudantium asperiores accusamus voluptatum delectus, pariatur
-            consectetur quam molestias itaque. Nostrum repudiandae ipsa quaerat
-            velit nesciunt repellat vitae dolore qui architecto cum dolores,
-            sint aliquid esse explicabo sequi illo magnam eos nihil. Ex, eum
-            dolorum! Ut quos rem in, tempore, fuga beatae et esse omnis at dolor
-            nulla autem ea quod inventore voluptatum saepe quam, eius impedit
-            eum. Quas totam fuga asperiores quibusdam officia reprehenderit
-            dolorum et eaque facilis cupiditate, repudiandae voluptatum
-            aspernatur adipisci exercitationem. Minus distinctio odio amet
-            reprehenderit nesciunt esse dignissimos at consequatur? Quaerat
-            soluta, tenetur, blanditiis optio sequi distinctio nihil,
-            repellendus quis nemo nesciunt debitis harum maiores minus fuga
-            corporis fugiat illo. Eos veritatis quos ipsam dolores, libero
-            accusantium aperiam. Totam, assumenda. Amet quis ratione
-            reprehenderit.
+            <section class="footer__bg">
+                <div class="footer__content container">
+                    <a
+                        href="#"
+                        class="footer__content-logo lazy-loading"
+                        data-bg="../img/PC/footerLogo.png"
+                        data-bgmob="../img/Mobile/footerLogo.png"
+                    ></a>
+                    <h3>
+                        ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "МК
+                        СМАРТИНВЕСТ" ИНН 9725002820, ОГРН 1197746118206 от 18
+                        февраля 2019 г.
+                    </h3>
+                    <h4>
+                        Юр. Адрес: 115114, город Москва, Дербеневская наб, д. 7
+                        стр. 2, этаж 3 офис 52
+                    </h4>
+                    <h5>
+                        Обращаем Ваше внимание на то, что вся представленная на
+                        сайте информация, носит информационный характер и ни при
+                        каких условиях не является публичной офертой,
+                        определяемой положениями Статьи 437 (2) Гражданского
+                        кодекса Российской Федерации. Наличие конкретных
+                        комплектаций, опций и оборудования по доступным
+                        автомобилям уточняйте у продавцов консультантов. Условия
+                        акций ограничены, подробности уточняйте в отделе продаж
+                        дилерского центра.
+                    </h5>
+                    <p>
+                        Предоставляя свои персональные данные и используя
+                        настоящий веб-сайт, Вы даете согласие на обработку Ваших
+                        персональных данных и принимаете условия их обработки.
+                    </p>
+                    <a href="#">Политика конфиденциальности </a>
+                    <a href="#">Пользовательское соглашение</a>
+                </div>
+            </section>
         </footer>
     </body>
 </html>
