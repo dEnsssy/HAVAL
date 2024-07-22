@@ -174,3 +174,28 @@ btnsForOpenConfig.forEach((btn) => {
         ).classList.toggle("activeArrowList");
     });
 });
+
+// fancybox
+
+$(document).ready(function () {
+    // Инициализация FancyBox
+    $("[data-fancybox]").fancybox({
+        buttons: ["slideShow", "fullScreen", "thumbs", "close"],
+        loop: true,
+    });
+
+    $(".btn-to-success").on("click", function () {
+        var nextModal = $(this).data("next");
+        console.log(1);
+        // Закрыть текущее модальное окно
+        $.fancybox.close();
+
+        // Открыть новое модальное окно через короткую задержку
+        setTimeout(function () {
+            $.fancybox.open({
+                src: nextModal,
+                type: "inline",
+            });
+        }, 3); // задержка 300 миллисекунд
+    });
+});

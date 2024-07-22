@@ -12,6 +12,13 @@
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
         <!-- jquery -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <!-- fancybox -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"
+        />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
         <!-- select2 -->
         <link
             href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"
@@ -38,6 +45,143 @@
         <title>HAVAL</title>
     </head>
     <body>
+        <section style="display: none" class="modals">
+            <section style="display: none" class="modals__call" id="modalCall">
+                <div
+                    class="modals__call-img lazy-loading"
+                    data-bg="../img/PC/modalCall.png"
+                    data-bgmob="../img/Mobile/modal1.png"
+                ></div>
+                <div class="modals__call-text">
+                    <h2>Оставьте заявку и мы Вам перезвоним!</h2>
+                    <h3>При покупке в день обращения доп. скидка 10%</h3>
+                    <form action="#">
+                        <input type="text" placeholder="Ваше имя" />
+                        <input type="tel" placeholder="Ваш номер телефона" />
+                        <button
+                            class="btn-to-success"
+                            data-next="#modalSuccess"
+                        >
+                            Заказать звонок
+                        </button>
+                        <div class="custom-checkbox">
+                            <label>
+                                <div class="custom-checkbox-checker">
+                                    <input required checked type="checkbox" />
+                                    <span></span>
+                                </div>
+                                <div class="custom-checkbox-text">
+                                    Нажимая кнопку
+                                    <span class="custom-checkbox-span1"
+                                        >“Заказать звонок”</span
+                                    >
+                                    Вы даете согласие на обработку своих
+                                    <a href="#" class="custom-checkbox-span2">
+                                        персональных данных</a
+                                    >
+                                </div>
+                            </label>
+                        </div>
+                    </form>
+                </div>
+            </section>
+            <section
+                style="display: none"
+                class="modals__credit"
+                id="modalCredit"
+            >
+                <div
+                    class="modals__call-img lazy-loading"
+                    data-bg="../img/PC/modalCredit.png"
+                    data-bgmob="../img/Mobile/modal2.png"
+                ></div>
+                <div class="modals__credit-text">
+                    <h2>Выгодный автокредит на Haval от 4,9%</h2>
+                    <h3>Одобрение за 1 день!</h3>
+                    <form action="#">
+                        <input type="text" placeholder="Ваше имя" />
+                        <input type="tel" placeholder="Ваш номер телефона" />
+                        <button
+                            class="btn-to-success"
+                            data-next="#modalSuccess"
+                        >
+                            Рассчитать кредит
+                        </button>
+                        <div class="custom-checkbox">
+                            <label>
+                                <div class="custom-checkbox-checker">
+                                    <input required checked type="checkbox" />
+                                    <span></span>
+                                </div>
+                                <div class="custom-checkbox-text">
+                                    Нажимая кнопку
+                                    <span class="custom-checkbox-span1"
+                                        >“Заказать звонок”</span
+                                    >
+                                    Вы даете согласие на обработку своих
+                                    <a href="#" class="custom-checkbox-span2">
+                                        персональных данных</a
+                                    >
+                                </div>
+                            </label>
+                        </div>
+                    </form>
+                </div>
+            </section>
+            <section
+                style="display: none"
+                class="modals__tradein"
+                id="modalTradeIn"
+            >
+                <div
+                    class="modals__call-img lazy-loading"
+                    data-bg="../img/PC/modalTrade.png"
+                    data-bgmob="../img/Mobile/modal3.png"
+                ></div>
+                <div class="modals__tradein-text">
+                    <h2>Trade-In в Вашу пользу</h2>
+                    <h3>Обменяйте свой автомобиль на новый Haval</h3>
+                    <form action="#">
+                        <input type="text" placeholder="Ваше имя" />
+                        <input type="tel" placeholder="Ваш номер телефона" />
+                        <button
+                            class="btn-to-success"
+                            data-next="#modalSuccess"
+                        >
+                            Оформить Trade-In
+                        </button>
+                        <div class="custom-checkbox">
+                            <label>
+                                <div class="custom-checkbox-checker">
+                                    <input required checked type="checkbox" />
+                                    <span></span>
+                                </div>
+                                <div class="custom-checkbox-text">
+                                    Нажимая кнопку
+                                    <span class="custom-checkbox-span1"
+                                        >“Заказать звонок”</span
+                                    >
+                                    Вы даете согласие на обработку своих
+                                    <a href="#" class="custom-checkbox-span2">
+                                        персональных данных</a
+                                    >
+                                </div>
+                            </label>
+                        </div>
+                    </form>
+                </div>
+            </section>
+            <section
+                style="display: none"
+                class="modals__success"
+                id="modalSuccess"
+            >
+                <div class="modals__success-text">
+                    <h2>Спасибо за заявку!</h2>
+                    <h3>Наш менеджер свяжется с Вами через 2-3 минуты</h3>
+                </div>
+            </section>
+        </section>
         <header class="header">
             <div class="header__content-top-mobile container invisible__on-pc">
                 <a class="header__content-top-mobile-logo" href="#"></a>
@@ -88,7 +232,11 @@
                     </ul>
                     <h2>г. Москва, 27 км МКАД (внешняя сторона)</h2>
                     <a href="tel:+7 (495) 320-89-99">+7 (495) 320-89-99</a>
-                    <button class="header__content-navigation-mobile-btn">
+                    <button
+                        data-fancybox
+                        data-src="#modalCall"
+                        class="header__content-navigation-mobile-btn"
+                    >
                         Заказать звонок
                     </button>
                 </div>
@@ -100,7 +248,9 @@
                             <a href="tel:+7 (495) 320-89-99"
                                 >+7 (495) 320-89-99</a
                             >
-                            <button>Заказать звонок</button>
+                            <button data-fancybox data-src="#modalCall">
+                                Заказать звонок
+                            </button>
                         </div>
                     </div>
                     <ul class="header__content-navigation invisible__on-mobile">
@@ -119,7 +269,9 @@
                             5 лет гарантии или 150 000 км пробега + 3 платежа по
                             кредиту в подарок
                         </h2>
-                        <button>Получить предложение</button>
+                        <button data-fancybox data-src="#modalCall">
+                            Получить предложение
+                        </button>
                     </div>
                 </div>
             </div>
@@ -137,7 +289,9 @@
                     <div class="timer__content-center-mobile invisible__on-pc">
                         <script src="//megatimer.ru/get/6e523ca1a74ddafda2fb8f0f08bab39b.js"></script>
                     </div>
-                    <button>получить предложение</button>
+                    <button data-fancybox data-src="#modalCall">
+                        получить предложение
+                    </button>
                 </div>
             </section>
             <section id="models" class="models container">
@@ -228,10 +382,18 @@
                                 </li>
                             </ul>
                             <div class="models__cars-card-info-btns">
-                                <button class="models__cars-card-info-btns-1">
+                                <button
+                                    data-fancybox
+                                    data-src="#modalCall"
+                                    class="models__cars-card-info-btns-1"
+                                >
                                     ПОЛУЧИТЬ ПРЕДЛОЖЕНИЕ
                                 </button>
-                                <button class="models__cars-card-info-btns-2">
+                                <button
+                                    data-fancybox
+                                    data-src="#modalCredit"
+                                    class="models__cars-card-info-btns-2"
+                                >
                                     в кредит от хх ххх ₽/мес
                                 </button>
                             </div>
@@ -304,10 +466,18 @@
                                 </li>
                             </ul>
                             <div class="models__cars-card-info-btns">
-                                <button class="models__cars-card-info-btns-1">
+                                <button
+                                    data-fancybox
+                                    data-src="#modalCall"
+                                    class="models__cars-card-info-btns-1"
+                                >
                                     ПОЛУЧИТЬ ПРЕДЛОЖЕНИЕ
                                 </button>
-                                <button class="models__cars-card-info-btns-2">
+                                <button
+                                    data-fancybox
+                                    data-src="#modalCredit"
+                                    class="models__cars-card-info-btns-2"
+                                >
                                     в кредит от хх ххх ₽/мес
                                 </button>
                             </div>
@@ -380,10 +550,18 @@
                                 </li>
                             </ul>
                             <div class="models__cars-card-info-btns">
-                                <button class="models__cars-card-info-btns-1">
+                                <button
+                                    data-fancybox
+                                    data-src="#modalCall"
+                                    class="models__cars-card-info-btns-1"
+                                >
                                     ПОЛУЧИТЬ ПРЕДЛОЖЕНИЕ
                                 </button>
-                                <button class="models__cars-card-info-btns-2">
+                                <button
+                                    data-fancybox
+                                    data-src="#modalCredit"
+                                    class="models__cars-card-info-btns-2"
+                                >
                                     в кредит от хх ххх ₽/мес
                                 </button>
                             </div>
@@ -445,29 +623,180 @@
                         <div
                             class="configurations__list-item configurations__list-item-1 container"
                         >
-                            <button class="configurations__list-item-config">
-                                <h3>1.5 MT Active</h3>
+                            <button
+                                class="configurations__list-item-config invisible__on-mobile"
+                            >
+                                <h3 class="">1.5 MT Active</h3>
                                 <div
                                     class="configurations__list-item-config-arrow"
                                 ></div>
                             </button>
-                            <h2>150 л.с./передний/МКПП 5</h2>
-                            <h3>от 99 999₽/мес.</h3>
+                            <div
+                                class="configurations__list-item-characteristic invisible__on-pc"
+                            >
+                                <h2>1.5 MT Active</h2>
+                                <ul>
+                                    <li>
+                                        <svg
+                                            width="13"
+                                            height="17"
+                                            viewBox="0 0 13 17"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <path
+                                                d="M1.92969 9.69681L9.12405 1L7.36543 7.30319H11.2024L3.76825 16L5.68674 9.69681H1.92969Z"
+                                                stroke="#232931"
+                                                stroke-linecap="round"
+                                            />
+                                        </svg>
+                                        150 л.с.
+                                    </li>
+                                    <li>
+                                        <svg
+                                            width="13"
+                                            height="17"
+                                            viewBox="0 0 13 17"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <path
+                                                d="M6.64347 5.33333C8.11623 5.33333 9.31014 4.13943 9.31014 2.66667C9.31014 1.19391 8.11623 0 6.64347 0C5.17071 0 3.97681 1.19391 3.97681 2.66667C3.97681 4.13943 5.17071 5.33333 6.64347 5.33333Z"
+                                                fill="#232931"
+                                            />
+                                            <path
+                                                d="M5.71338 5.30031V10.3271C5.71338 10.8557 6.10213 11.2868 6.5816 11.2868C7.06106 11.2868 7.44981 10.857 7.44981 10.3271V5.30031C7.44981 4.74033 7.0173 4.2991 6.51196 4.34424C6.05915 4.3841 5.71338 4.80052 5.71338 5.30031Z"
+                                                fill="#232931"
+                                            />
+                                            <path
+                                                d="M4.19087 10.3545H8.86275V8.96888C8.86328 8.76107 8.94665 8.56195 9.09457 8.4152C9.24248 8.26845 9.44287 8.18603 9.65179 8.18604C9.85719 8.18604 10.0542 8.2672 10.1994 8.41167C10.3447 8.55613 10.4263 8.75208 10.4263 8.95639V13.7026C10.4258 13.9173 10.3398 14.1231 10.187 14.2748C10.0342 14.4264 9.82715 14.5116 9.61128 14.5116C9.51088 14.5117 9.41145 14.492 9.31874 14.4536C9.22603 14.4152 9.14187 14.359 9.07112 14.2881C9.00036 14.2173 8.94441 14.1332 8.9065 14.0407C8.86858 13.9482 8.84944 13.8492 8.85019 13.7493L8.86275 11.9983L7.44304 12.0136V13.6426C7.44299 13.7569 7.42027 13.8701 7.37619 13.9756C7.33211 14.0812 7.26754 14.1771 7.18616 14.2578C7.10478 14.3385 7.0082 14.4025 6.90194 14.446C6.79568 14.4896 6.68183 14.5119 6.56691 14.5116C6.33035 14.5116 6.10344 14.4183 5.93593 14.2521C5.76843 14.086 5.67401 13.8605 5.67336 13.6252V12.018L4.19087 12.0362V13.7816C4.19034 13.9754 4.11256 14.1611 3.97459 14.2979C3.83663 14.4348 3.64974 14.5116 3.45489 14.5116H3.40426C3.31655 14.5116 3.22969 14.4944 3.14865 14.461C3.06762 14.4277 2.99398 14.3787 2.93196 14.317C2.86994 14.2553 2.82074 14.1821 2.78717 14.1015C2.75361 14.0209 2.73633 13.9345 2.73633 13.8472V8.94027C2.73676 8.74009 2.81701 8.54825 2.95946 8.40685C3.10192 8.26545 3.29496 8.18603 3.49621 8.18604C3.58824 8.18603 3.67937 8.2041 3.76437 8.23919C3.84938 8.27429 3.92658 8.32572 3.99156 8.39055C4.05655 8.45537 4.10803 8.53232 4.14307 8.61697C4.1781 8.70162 4.196 8.79232 4.19573 8.88386L4.19087 10.3545Z"
+                                                stroke="#232931"
+                                                stroke-width="0.7"
+                                                stroke-miterlimit="10"
+                                            />
+                                            <path
+                                                d="M11.0113 6.57361H2.39959C1.62662 6.57361 1 7.19902 1 7.9705V14.6031C1 15.3746 1.62662 16 2.39959 16H11.0113C11.7842 16 12.4109 15.3746 12.4109 14.6031V7.9705C12.4109 7.19902 11.7842 6.57361 11.0113 6.57361Z"
+                                                stroke="#232931"
+                                                stroke-width="0.7"
+                                                stroke-miterlimit="10"
+                                            />
+                                            <path
+                                                d="M5.09229 1.98444C5.09229 1.98444 5.10682 1.62089 5.21632 1.4263C5.3876 1.1219 5.9605 0.930176 5.9605 0.930176"
+                                                stroke="white"
+                                                stroke-width="0.7"
+                                                stroke-linecap="round"
+                                            />
+                                        </svg>
+                                        МКПП 5
+                                    </li>
+                                    <li>
+                                        <svg
+                                            width="13"
+                                            height="17"
+                                            viewBox="0 0 13 17"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <path
+                                                d="M4.08008 2.04004V2.25228C4.08008 2.6108 4.26863 2.9429 4.5765 3.12664L4.623 3.15439C4.66222 3.17779 4.70411 3.1964 4.74778 3.2098V3.2098C4.98696 3.28321 5.15024 3.50412 5.15024 3.75432V4.72595C5.15024 5.07137 5.30933 5.39753 5.58153 5.61019L5.66781 5.67759C5.80918 5.78804 5.98343 5.84804 6.16284 5.84804V5.84804C6.33076 5.84804 6.49448 5.79546 6.631 5.69769L6.72976 5.62697C7.03978 5.40495 7.22368 5.04704 7.22368 4.66572V3.78089C7.22368 3.51847 7.40377 3.29033 7.65902 3.2294V3.2294C7.76768 3.20346 7.86626 3.146 7.94238 3.06424L7.97092 3.03357C8.09249 2.90298 8.16008 2.73119 8.16008 2.55277V2.04004"
+                                                stroke="#222222"
+                                                stroke-linecap="round"
+                                            />
+                                            <path
+                                                d="M2.7207 2.37999H3.63138C3.87953 2.37999 4.0807 2.17882 4.0807 1.93066V1.93066C4.0807 1.82555 4.11755 1.72376 4.18485 1.64301L4.22894 1.5901C4.35045 1.44429 4.53045 1.35999 4.72025 1.35999H7.52115C7.71096 1.35999 7.89096 1.44429 8.01247 1.5901L8.05656 1.64301C8.12385 1.72376 8.1607 1.82555 8.1607 1.93066V1.93066C8.1607 2.17882 8.36187 2.37999 8.61003 2.37999H9.5207"
+                                                stroke="#222222"
+                                                stroke-linecap="round"
+                                            />
+                                            <rect
+                                                x="0.714"
+                                                y="0.714"
+                                                width="1.428"
+                                                height="3.468"
+                                                rx="0.714"
+                                                fill="#222222"
+                                                stroke="#222222"
+                                                stroke-width="1.428"
+                                            />
+                                            <rect
+                                                x="10.0988"
+                                                y="0.714"
+                                                width="1.428"
+                                                height="3.468"
+                                                rx="0.714"
+                                                fill="#222222"
+                                                stroke="#222222"
+                                                stroke-width="1.428"
+                                            />
+                                            <rect
+                                                x="0.714"
+                                                y="12.818"
+                                                width="1.428"
+                                                height="3.468"
+                                                rx="0.714"
+                                                fill="#222222"
+                                                stroke="#222222"
+                                                stroke-width="1.428"
+                                            />
+                                            <rect
+                                                x="10.0988"
+                                                y="12.818"
+                                                width="1.428"
+                                                height="3.468"
+                                                rx="0.714"
+                                                fill="#222222"
+                                                stroke="#222222"
+                                                stroke-width="1.428"
+                                            />
+                                            <path
+                                                d="M2.58398 14.416H9.65598"
+                                                stroke="#222222"
+                                                stroke-linecap="round"
+                                            />
+                                            <path
+                                                d="M6.11914 14.28V6.12"
+                                                stroke="#222222"
+                                                stroke-linecap="round"
+                                            />
+                                        </svg>
+                                        Передний
+                                    </li>
+                                </ul>
+                            </div>
+                            <div
+                                class="invisible__on-pc configurations__list-item-credit"
+                            >
+                                <h2>Платеж</h2>
+                                <h3>от 99 999₽/мес</h3>
+                            </div>
+                            <h2 class="invisible__on-mobile">
+                                150 л.с./передний/МКПП 5
+                            </h2>
+                            <h3 class="invisible__on-mobile">
+                                от 99 999₽/мес.
+                            </h3>
                             <div class="configurations__list-item-price">
                                 <h4>2 885 000 ₽</h4>
-                                <h5>от 1 999 999₽</h5>
+                                <h5>от <span>1 999 999₽</span></h5>
                             </div>
                             <div class="configurations__list-item-btns">
-                                <button class="configurations__list-item-btns1">
+                                <button
+                                    data-fancybox
+                                    data-src="#modalCredit"
+                                    class="configurations__list-item-btns1"
+                                >
                                     рассчитать кредит
                                 </button>
-                                <button class="configurations__list-item-btns2">
+                                <button
+                                    data-fancybox
+                                    data-src="#modalCall"
+                                    class="configurations__list-item-btns2"
+                                >
                                     зафиксировать цену
                                 </button>
                             </div>
                         </div>
                         <div
-                            class="configurations__list-item-info disableArrow container"
+                            class="configurations__list-item-info disableArrow invisible__on-mobile container"
                         >
                             <div class="configurations__list-item-info1">
                                 <h3>экстерьер и внешнее оснащение</h3>
@@ -516,34 +845,185 @@
                         </div>
                     </div>
                     <div
-                        class="configurations__list-content configurations__list-content-1"
+                        class="configurations__list-content configurations__list-content-2"
                     >
                         <div
-                            class="configurations__list-item configurations__list-item-1 container"
+                            class="configurations__list-item configurations__list-item-2 container"
                         >
-                            <button class="configurations__list-item-config">
-                                <h3>1.5 MT Active</h3>
+                            <button
+                                class="configurations__list-item-config invisible__on-mobile"
+                            >
+                                <h3 class="">1.5 MT Active</h3>
                                 <div
                                     class="configurations__list-item-config-arrow"
                                 ></div>
                             </button>
-                            <h2>150 л.с./передний/МКПП 5</h2>
-                            <h3>от 99 999₽/мес.</h3>
+                            <div
+                                class="configurations__list-item-characteristic invisible__on-pc"
+                            >
+                                <h2>1.5 MT Active</h2>
+                                <ul>
+                                    <li>
+                                        <svg
+                                            width="13"
+                                            height="17"
+                                            viewBox="0 0 13 17"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <path
+                                                d="M1.92969 9.69681L9.12405 1L7.36543 7.30319H11.2024L3.76825 16L5.68674 9.69681H1.92969Z"
+                                                stroke="#232931"
+                                                stroke-linecap="round"
+                                            />
+                                        </svg>
+                                        150 л.с.
+                                    </li>
+                                    <li>
+                                        <svg
+                                            width="13"
+                                            height="17"
+                                            viewBox="0 0 13 17"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <path
+                                                d="M6.64347 5.33333C8.11623 5.33333 9.31014 4.13943 9.31014 2.66667C9.31014 1.19391 8.11623 0 6.64347 0C5.17071 0 3.97681 1.19391 3.97681 2.66667C3.97681 4.13943 5.17071 5.33333 6.64347 5.33333Z"
+                                                fill="#232931"
+                                            />
+                                            <path
+                                                d="M5.71338 5.30031V10.3271C5.71338 10.8557 6.10213 11.2868 6.5816 11.2868C7.06106 11.2868 7.44981 10.857 7.44981 10.3271V5.30031C7.44981 4.74033 7.0173 4.2991 6.51196 4.34424C6.05915 4.3841 5.71338 4.80052 5.71338 5.30031Z"
+                                                fill="#232931"
+                                            />
+                                            <path
+                                                d="M4.19087 10.3545H8.86275V8.96888C8.86328 8.76107 8.94665 8.56195 9.09457 8.4152C9.24248 8.26845 9.44287 8.18603 9.65179 8.18604C9.85719 8.18604 10.0542 8.2672 10.1994 8.41167C10.3447 8.55613 10.4263 8.75208 10.4263 8.95639V13.7026C10.4258 13.9173 10.3398 14.1231 10.187 14.2748C10.0342 14.4264 9.82715 14.5116 9.61128 14.5116C9.51088 14.5117 9.41145 14.492 9.31874 14.4536C9.22603 14.4152 9.14187 14.359 9.07112 14.2881C9.00036 14.2173 8.94441 14.1332 8.9065 14.0407C8.86858 13.9482 8.84944 13.8492 8.85019 13.7493L8.86275 11.9983L7.44304 12.0136V13.6426C7.44299 13.7569 7.42027 13.8701 7.37619 13.9756C7.33211 14.0812 7.26754 14.1771 7.18616 14.2578C7.10478 14.3385 7.0082 14.4025 6.90194 14.446C6.79568 14.4896 6.68183 14.5119 6.56691 14.5116C6.33035 14.5116 6.10344 14.4183 5.93593 14.2521C5.76843 14.086 5.67401 13.8605 5.67336 13.6252V12.018L4.19087 12.0362V13.7816C4.19034 13.9754 4.11256 14.1611 3.97459 14.2979C3.83663 14.4348 3.64974 14.5116 3.45489 14.5116H3.40426C3.31655 14.5116 3.22969 14.4944 3.14865 14.461C3.06762 14.4277 2.99398 14.3787 2.93196 14.317C2.86994 14.2553 2.82074 14.1821 2.78717 14.1015C2.75361 14.0209 2.73633 13.9345 2.73633 13.8472V8.94027C2.73676 8.74009 2.81701 8.54825 2.95946 8.40685C3.10192 8.26545 3.29496 8.18603 3.49621 8.18604C3.58824 8.18603 3.67937 8.2041 3.76437 8.23919C3.84938 8.27429 3.92658 8.32572 3.99156 8.39055C4.05655 8.45537 4.10803 8.53232 4.14307 8.61697C4.1781 8.70162 4.196 8.79232 4.19573 8.88386L4.19087 10.3545Z"
+                                                stroke="#232931"
+                                                stroke-width="0.7"
+                                                stroke-miterlimit="10"
+                                            />
+                                            <path
+                                                d="M11.0113 6.57361H2.39959C1.62662 6.57361 1 7.19902 1 7.9705V14.6031C1 15.3746 1.62662 16 2.39959 16H11.0113C11.7842 16 12.4109 15.3746 12.4109 14.6031V7.9705C12.4109 7.19902 11.7842 6.57361 11.0113 6.57361Z"
+                                                stroke="#232931"
+                                                stroke-width="0.7"
+                                                stroke-miterlimit="10"
+                                            />
+                                            <path
+                                                d="M5.09229 1.98444C5.09229 1.98444 5.10682 1.62089 5.21632 1.4263C5.3876 1.1219 5.9605 0.930176 5.9605 0.930176"
+                                                stroke="white"
+                                                stroke-width="0.7"
+                                                stroke-linecap="round"
+                                            />
+                                        </svg>
+                                        МКПП 5
+                                    </li>
+                                    <li>
+                                        <svg
+                                            width="13"
+                                            height="17"
+                                            viewBox="0 0 13 17"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <path
+                                                d="M4.08008 2.04004V2.25228C4.08008 2.6108 4.26863 2.9429 4.5765 3.12664L4.623 3.15439C4.66222 3.17779 4.70411 3.1964 4.74778 3.2098V3.2098C4.98696 3.28321 5.15024 3.50412 5.15024 3.75432V4.72595C5.15024 5.07137 5.30933 5.39753 5.58153 5.61019L5.66781 5.67759C5.80918 5.78804 5.98343 5.84804 6.16284 5.84804V5.84804C6.33076 5.84804 6.49448 5.79546 6.631 5.69769L6.72976 5.62697C7.03978 5.40495 7.22368 5.04704 7.22368 4.66572V3.78089C7.22368 3.51847 7.40377 3.29033 7.65902 3.2294V3.2294C7.76768 3.20346 7.86626 3.146 7.94238 3.06424L7.97092 3.03357C8.09249 2.90298 8.16008 2.73119 8.16008 2.55277V2.04004"
+                                                stroke="#222222"
+                                                stroke-linecap="round"
+                                            />
+                                            <path
+                                                d="M2.7207 2.37999H3.63138C3.87953 2.37999 4.0807 2.17882 4.0807 1.93066V1.93066C4.0807 1.82555 4.11755 1.72376 4.18485 1.64301L4.22894 1.5901C4.35045 1.44429 4.53045 1.35999 4.72025 1.35999H7.52115C7.71096 1.35999 7.89096 1.44429 8.01247 1.5901L8.05656 1.64301C8.12385 1.72376 8.1607 1.82555 8.1607 1.93066V1.93066C8.1607 2.17882 8.36187 2.37999 8.61003 2.37999H9.5207"
+                                                stroke="#222222"
+                                                stroke-linecap="round"
+                                            />
+                                            <rect
+                                                x="0.714"
+                                                y="0.714"
+                                                width="1.428"
+                                                height="3.468"
+                                                rx="0.714"
+                                                fill="#222222"
+                                                stroke="#222222"
+                                                stroke-width="1.428"
+                                            />
+                                            <rect
+                                                x="10.0988"
+                                                y="0.714"
+                                                width="1.428"
+                                                height="3.468"
+                                                rx="0.714"
+                                                fill="#222222"
+                                                stroke="#222222"
+                                                stroke-width="1.428"
+                                            />
+                                            <rect
+                                                x="0.714"
+                                                y="12.818"
+                                                width="1.428"
+                                                height="3.468"
+                                                rx="0.714"
+                                                fill="#222222"
+                                                stroke="#222222"
+                                                stroke-width="1.428"
+                                            />
+                                            <rect
+                                                x="10.0988"
+                                                y="12.818"
+                                                width="1.428"
+                                                height="3.468"
+                                                rx="0.714"
+                                                fill="#222222"
+                                                stroke="#222222"
+                                                stroke-width="1.428"
+                                            />
+                                            <path
+                                                d="M2.58398 14.416H9.65598"
+                                                stroke="#222222"
+                                                stroke-linecap="round"
+                                            />
+                                            <path
+                                                d="M6.11914 14.28V6.12"
+                                                stroke="#222222"
+                                                stroke-linecap="round"
+                                            />
+                                        </svg>
+                                        Передний
+                                    </li>
+                                </ul>
+                            </div>
+                            <div
+                                class="invisible__on-pc configurations__list-item-credit"
+                            >
+                                <h2>Платеж</h2>
+                                <h3>от 99 999₽/мес</h3>
+                            </div>
+                            <h2 class="invisible__on-mobile">
+                                150 л.с./передний/МКПП 5
+                            </h2>
+                            <h3 class="invisible__on-mobile">
+                                от 99 999₽/мес.
+                            </h3>
                             <div class="configurations__list-item-price">
                                 <h4>2 885 000 ₽</h4>
-                                <h5>от 1 999 999₽</h5>
+                                <h5>от <span>1 999 999₽</span></h5>
                             </div>
                             <div class="configurations__list-item-btns">
-                                <button class="configurations__list-item-btns1">
+                                <button
+                                    data-fancybox
+                                    data-src="#modalCredit"
+                                    class="configurations__list-item-btns1"
+                                >
                                     рассчитать кредит
                                 </button>
-                                <button class="configurations__list-item-btns2">
+                                <button
+                                    data-fancybox
+                                    data-src="#modalCall"
+                                    class="configurations__list-item-btns2"
+                                >
                                     зафиксировать цену
                                 </button>
                             </div>
                         </div>
                         <div
-                            class="configurations__list-item-info disableArrow container"
+                            class="configurations__list-item-info disableArrow invisible__on-mobile container"
                         >
                             <div class="configurations__list-item-info1">
                                 <h3>экстерьер и внешнее оснащение</h3>
@@ -592,34 +1072,185 @@
                         </div>
                     </div>
                     <div
-                        class="configurations__list-content configurations__list-content-1"
+                        class="configurations__list-content configurations__list-content-3"
                     >
                         <div
-                            class="configurations__list-item configurations__list-item-1 container"
+                            class="configurations__list-item configurations__list-item-3 container"
                         >
-                            <button class="configurations__list-item-config">
-                                <h3>1.5 MT Active</h3>
-                                <div class="configurations__list-item-config-arrow">
-
-                                </div>
+                            <button
+                                class="configurations__list-item-config invisible__on-mobile"
+                            >
+                                <h3 class="">1.5 MT Active</h3>
+                                <div
+                                    class="configurations__list-item-config-arrow"
+                                ></div>
                             </button>
-                            <h2>150 л.с./передний/МКПП 5</h2>
-                            <h3>от 99 999₽/мес.</h3>
+                            <div
+                                class="configurations__list-item-characteristic invisible__on-pc"
+                            >
+                                <h2>1.5 MT Active</h2>
+                                <ul>
+                                    <li>
+                                        <svg
+                                            width="13"
+                                            height="17"
+                                            viewBox="0 0 13 17"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <path
+                                                d="M1.92969 9.69681L9.12405 1L7.36543 7.30319H11.2024L3.76825 16L5.68674 9.69681H1.92969Z"
+                                                stroke="#232931"
+                                                stroke-linecap="round"
+                                            />
+                                        </svg>
+                                        150 л.с.
+                                    </li>
+                                    <li>
+                                        <svg
+                                            width="13"
+                                            height="17"
+                                            viewBox="0 0 13 17"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <path
+                                                d="M6.64347 5.33333C8.11623 5.33333 9.31014 4.13943 9.31014 2.66667C9.31014 1.19391 8.11623 0 6.64347 0C5.17071 0 3.97681 1.19391 3.97681 2.66667C3.97681 4.13943 5.17071 5.33333 6.64347 5.33333Z"
+                                                fill="#232931"
+                                            />
+                                            <path
+                                                d="M5.71338 5.30031V10.3271C5.71338 10.8557 6.10213 11.2868 6.5816 11.2868C7.06106 11.2868 7.44981 10.857 7.44981 10.3271V5.30031C7.44981 4.74033 7.0173 4.2991 6.51196 4.34424C6.05915 4.3841 5.71338 4.80052 5.71338 5.30031Z"
+                                                fill="#232931"
+                                            />
+                                            <path
+                                                d="M4.19087 10.3545H8.86275V8.96888C8.86328 8.76107 8.94665 8.56195 9.09457 8.4152C9.24248 8.26845 9.44287 8.18603 9.65179 8.18604C9.85719 8.18604 10.0542 8.2672 10.1994 8.41167C10.3447 8.55613 10.4263 8.75208 10.4263 8.95639V13.7026C10.4258 13.9173 10.3398 14.1231 10.187 14.2748C10.0342 14.4264 9.82715 14.5116 9.61128 14.5116C9.51088 14.5117 9.41145 14.492 9.31874 14.4536C9.22603 14.4152 9.14187 14.359 9.07112 14.2881C9.00036 14.2173 8.94441 14.1332 8.9065 14.0407C8.86858 13.9482 8.84944 13.8492 8.85019 13.7493L8.86275 11.9983L7.44304 12.0136V13.6426C7.44299 13.7569 7.42027 13.8701 7.37619 13.9756C7.33211 14.0812 7.26754 14.1771 7.18616 14.2578C7.10478 14.3385 7.0082 14.4025 6.90194 14.446C6.79568 14.4896 6.68183 14.5119 6.56691 14.5116C6.33035 14.5116 6.10344 14.4183 5.93593 14.2521C5.76843 14.086 5.67401 13.8605 5.67336 13.6252V12.018L4.19087 12.0362V13.7816C4.19034 13.9754 4.11256 14.1611 3.97459 14.2979C3.83663 14.4348 3.64974 14.5116 3.45489 14.5116H3.40426C3.31655 14.5116 3.22969 14.4944 3.14865 14.461C3.06762 14.4277 2.99398 14.3787 2.93196 14.317C2.86994 14.2553 2.82074 14.1821 2.78717 14.1015C2.75361 14.0209 2.73633 13.9345 2.73633 13.8472V8.94027C2.73676 8.74009 2.81701 8.54825 2.95946 8.40685C3.10192 8.26545 3.29496 8.18603 3.49621 8.18604C3.58824 8.18603 3.67937 8.2041 3.76437 8.23919C3.84938 8.27429 3.92658 8.32572 3.99156 8.39055C4.05655 8.45537 4.10803 8.53232 4.14307 8.61697C4.1781 8.70162 4.196 8.79232 4.19573 8.88386L4.19087 10.3545Z"
+                                                stroke="#232931"
+                                                stroke-width="0.7"
+                                                stroke-miterlimit="10"
+                                            />
+                                            <path
+                                                d="M11.0113 6.57361H2.39959C1.62662 6.57361 1 7.19902 1 7.9705V14.6031C1 15.3746 1.62662 16 2.39959 16H11.0113C11.7842 16 12.4109 15.3746 12.4109 14.6031V7.9705C12.4109 7.19902 11.7842 6.57361 11.0113 6.57361Z"
+                                                stroke="#232931"
+                                                stroke-width="0.7"
+                                                stroke-miterlimit="10"
+                                            />
+                                            <path
+                                                d="M5.09229 1.98444C5.09229 1.98444 5.10682 1.62089 5.21632 1.4263C5.3876 1.1219 5.9605 0.930176 5.9605 0.930176"
+                                                stroke="white"
+                                                stroke-width="0.7"
+                                                stroke-linecap="round"
+                                            />
+                                        </svg>
+                                        МКПП 5
+                                    </li>
+                                    <li>
+                                        <svg
+                                            width="13"
+                                            height="17"
+                                            viewBox="0 0 13 17"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <path
+                                                d="M4.08008 2.04004V2.25228C4.08008 2.6108 4.26863 2.9429 4.5765 3.12664L4.623 3.15439C4.66222 3.17779 4.70411 3.1964 4.74778 3.2098V3.2098C4.98696 3.28321 5.15024 3.50412 5.15024 3.75432V4.72595C5.15024 5.07137 5.30933 5.39753 5.58153 5.61019L5.66781 5.67759C5.80918 5.78804 5.98343 5.84804 6.16284 5.84804V5.84804C6.33076 5.84804 6.49448 5.79546 6.631 5.69769L6.72976 5.62697C7.03978 5.40495 7.22368 5.04704 7.22368 4.66572V3.78089C7.22368 3.51847 7.40377 3.29033 7.65902 3.2294V3.2294C7.76768 3.20346 7.86626 3.146 7.94238 3.06424L7.97092 3.03357C8.09249 2.90298 8.16008 2.73119 8.16008 2.55277V2.04004"
+                                                stroke="#222222"
+                                                stroke-linecap="round"
+                                            />
+                                            <path
+                                                d="M2.7207 2.37999H3.63138C3.87953 2.37999 4.0807 2.17882 4.0807 1.93066V1.93066C4.0807 1.82555 4.11755 1.72376 4.18485 1.64301L4.22894 1.5901C4.35045 1.44429 4.53045 1.35999 4.72025 1.35999H7.52115C7.71096 1.35999 7.89096 1.44429 8.01247 1.5901L8.05656 1.64301C8.12385 1.72376 8.1607 1.82555 8.1607 1.93066V1.93066C8.1607 2.17882 8.36187 2.37999 8.61003 2.37999H9.5207"
+                                                stroke="#222222"
+                                                stroke-linecap="round"
+                                            />
+                                            <rect
+                                                x="0.714"
+                                                y="0.714"
+                                                width="1.428"
+                                                height="3.468"
+                                                rx="0.714"
+                                                fill="#222222"
+                                                stroke="#222222"
+                                                stroke-width="1.428"
+                                            />
+                                            <rect
+                                                x="10.0988"
+                                                y="0.714"
+                                                width="1.428"
+                                                height="3.468"
+                                                rx="0.714"
+                                                fill="#222222"
+                                                stroke="#222222"
+                                                stroke-width="1.428"
+                                            />
+                                            <rect
+                                                x="0.714"
+                                                y="12.818"
+                                                width="1.428"
+                                                height="3.468"
+                                                rx="0.714"
+                                                fill="#222222"
+                                                stroke="#222222"
+                                                stroke-width="1.428"
+                                            />
+                                            <rect
+                                                x="10.0988"
+                                                y="12.818"
+                                                width="1.428"
+                                                height="3.468"
+                                                rx="0.714"
+                                                fill="#222222"
+                                                stroke="#222222"
+                                                stroke-width="1.428"
+                                            />
+                                            <path
+                                                d="M2.58398 14.416H9.65598"
+                                                stroke="#222222"
+                                                stroke-linecap="round"
+                                            />
+                                            <path
+                                                d="M6.11914 14.28V6.12"
+                                                stroke="#222222"
+                                                stroke-linecap="round"
+                                            />
+                                        </svg>
+                                        Передний
+                                    </li>
+                                </ul>
+                            </div>
+                            <div
+                                class="invisible__on-pc configurations__list-item-credit"
+                            >
+                                <h2>Платеж</h2>
+                                <h3>от 99 999₽/мес</h3>
+                            </div>
+                            <h2 class="invisible__on-mobile">
+                                150 л.с./передний/МКПП 5
+                            </h2>
+                            <h3 class="invisible__on-mobile">
+                                от 99 999₽/мес.
+                            </h3>
                             <div class="configurations__list-item-price">
                                 <h4>2 885 000 ₽</h4>
-                                <h5>от 1 999 999₽</h5>
+                                <h5>от <span>1 999 999₽</span></h5>
                             </div>
                             <div class="configurations__list-item-btns">
-                                <button class="configurations__list-item-btns1">
+                                <button
+                                    data-fancybox
+                                    data-src="#modalCredit"
+                                    class="configurations__list-item-btns1"
+                                >
                                     рассчитать кредит
                                 </button>
-                                <button class="configurations__list-item-btns2">
+                                <button
+                                    data-fancybox
+                                    data-src="#modalCall"
+                                    class="configurations__list-item-btns2"
+                                >
                                     зафиксировать цену
                                 </button>
                             </div>
                         </div>
                         <div
-                            class="configurations__list-item-info disableArrow container"
+                            class="configurations__list-item-info disableArrow invisible__on-mobile container"
                         >
                             <div class="configurations__list-item-info1">
                                 <h3>экстерьер и внешнее оснащение</h3>
@@ -680,7 +1311,9 @@
                         <p>
                             Дополнительная выгода 70.000 ₽ при покупке в кредит
                         </p>
-                        <button>Рассчитать кредит</button>
+                        <button data-fancybox data-src="#modalCredit">
+                            Рассчитать кредит
+                        </button>
                     </div>
                 </div>
                 <div
@@ -706,7 +1339,9 @@
                             Обменяйте свой автомобиль на свой новый HAVAL с
                             выгодой до 300 000 ₽
                         </p>
-                        <button>Оформить Trade-In</button>
+                        <button data-fancybox data-src="#modalTradeIn">
+                            Оформить Trade-In
+                        </button>
                     </div>
                 </div>
             </section>
@@ -728,7 +1363,9 @@
                         Режим работы:
                         <p>Пн-Вс с 8:00 до 22:00</p>
                     </h2>
-                    <button>Заказать звонок</button>
+                    <button data-fancybox data-src="#modalCall">
+                        Заказать звонок
+                    </button>
                 </div>
             </section>
         </main>

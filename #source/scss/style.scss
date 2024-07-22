@@ -452,6 +452,7 @@ html {
     }
 }
 .configurations {
+    margin-bottom: 100px;
     & > h1 {
         @include fontSW(45px, 700);
         text-transform: uppercase;
@@ -501,11 +502,10 @@ html {
                     background-image: url("../img/PC/arrowClose.png");
                     background-repeat: no-repeat;
                     background-position: center;
-                    &.activeArrowList{
+                    &.activeArrowList {
                         background-image: url("../img/PC/arrowOpen.png");
                     }
                 }
-                
             }
             & > h2 {
                 text-align: center;
@@ -540,6 +540,7 @@ html {
                 @include fontSW(14px, 500);
                 text-transform: uppercase;
                 &1 {
+                    text-transform: uppercase;
                     padding: 12px 10px;
                     border: 1px solid $maneTextColor;
                     background-color: rgba(0, 0, 0, 0);
@@ -550,6 +551,7 @@ html {
                     border-color: $additionalColor;
                 }
                 &2 {
+                    text-transform: uppercase;
                     padding: 12px 10px;
                     border: 1px solid $maneTextColor;
                     background-color: rgba(0, 0, 0, 0);
@@ -767,6 +769,212 @@ html {
             text-decoration: underline;
             color: #fff;
             display: block;
+        }
+    }
+}
+
+.custom-checkbox {
+    & > label {
+        display: flex;
+        gap: 9px;
+    }
+    &-checker {
+        position: relative;
+        & > input {
+            opacity: 0;
+        }
+        & > input:checked + span {
+            background-image: url("/img/checkboxGalka.png");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-color: rgba(0, 0, 0, 0);
+        }
+        & > span {
+            position: absolute;
+            width: 15px;
+            height: 14px;
+            border-radius: 1px;
+            border: 0.6px solid #31363a;
+            top: 0;
+            left: 0;
+        }
+    }
+    &-text {
+        @include fontSW(9px, 400);
+        color: #000;
+    }
+    &-span1 {
+        color: $additionalColor;
+    }
+    &-span2 {
+        color: #000;
+        text-decoration: underline;
+    }
+}
+.fancybox-content {
+    max-width: 735px;
+    max-height: 400px;
+    padding: 0;
+}
+.modals {
+    &__call {
+        width: 735px;
+        height: 400px;
+        width: 100%;
+        display: flex !important;
+        align-items: center;
+        color: #000;
+        &-img {
+            width: 383px;
+            height: 400px;
+            background-repeat: no-repeat;
+            width: 100%;
+        }
+        &-text {
+            padding: 36px 20px 20px 20px;
+            & > h2 {
+                @include fontSW(22px, 500);
+                color: #000;
+                margin-bottom: 15px;
+                max-width: 277px;
+            }
+            & > h3 {
+                @include fontSW(15px, 400);
+                line-height: 95.859%;
+                margin-bottom: 53px;
+            }
+            & > form {
+                & > input {
+                    @include fontSW(12px, 400);
+                    padding-bottom: 12px;
+                    border-bottom: 1px solid rgba(0, 0, 0, 0.36);
+                    color: #000;
+                    margin-bottom: 30px;
+                }
+                & > input::placeholder {
+                    color: rgba(0, 0, 0, 0.49);
+                }
+                & > button {
+                    @include fontSW(15px, 700);
+                    color: #fff;
+                    padding: 16px 75px;
+                    background-color: #000;
+                    margin-bottom: 11px;
+                }
+            }
+        }
+    }
+    &__credit {
+        width: 735px;
+        height: 400px;
+        width: 100%;
+        display: flex !important;
+        align-items: center;
+        color: #000;
+        &-img {
+            width: 383px;
+            height: 400px;
+            background-repeat: no-repeat;
+            width: 100%;
+        }
+        &-text {
+            padding: 36px 20px 20px 20px;
+            & > h2 {
+                @include fontSW(22px, 500);
+                color: #000;
+                margin-bottom: 15px;
+                max-width: 277px;
+            }
+            & > h3 {
+                @include fontSW(15px, 400);
+                line-height: 95.859%;
+                margin-bottom: 53px;
+            }
+            & > form {
+                & > input {
+                    @include fontSW(12px, 400);
+                    padding-bottom: 12px;
+                    border-bottom: 1px solid rgba(0, 0, 0, 0.36);
+                    color: #000;
+                    margin-bottom: 30px;
+                }
+                & > input::placeholder {
+                    color: rgba(0, 0, 0, 0.49);
+                }
+                & > button {
+                    @include fontSW(15px, 700);
+                    color: #fff;
+                    padding: 16px 68px;
+                    background-color: #000;
+                    margin-bottom: 11px;
+                }
+            }
+        }
+    }
+    &__tradein {
+        width: 735px;
+        height: 400px;
+        width: 100%;
+        display: flex !important;
+        align-items: center;
+        color: #000;
+        &-img {
+            width: 383px;
+            height: 400px;
+            background-repeat: no-repeat;
+            width: 100%;
+        }
+        &-text {
+            padding: 36px 20px 20px 20px;
+            & > h2 {
+                @include fontSW(22px, 500);
+                color: #000;
+                margin-bottom: 15px;
+                max-width: 277px;
+            }
+            & > h3 {
+                @include fontSW(15px, 400);
+                line-height: 95.859%;
+                margin-bottom: 53px;
+            }
+            & > form {
+                & > input {
+                    @include fontSW(12px, 400);
+                    padding-bottom: 12px;
+                    border-bottom: 1px solid rgba(0, 0, 0, 0.36);
+                    color: #000;
+                    margin-bottom: 30px;
+                }
+                & > input::placeholder {
+                    color: rgba(0, 0, 0, 0.49);
+                }
+                & > button {
+                    @include fontSW(15px, 700);
+                    color: #fff;
+                    padding: 16px 68px;
+                    background-color: #000;
+                    margin-bottom: 11px;
+                }
+            }
+        }
+    }
+    &__success {
+        text-align: center;
+        width: 525px;
+        height: 322px;
+        display: flex !important;
+        align-items: center !important;
+        &-text {
+            margin: 0 auto;
+            & > h2 {
+                @include fontSW(35px, 700);
+                color: $additionalColor;
+                margin-bottom: 34px;
+            }
+            & > h3 {
+                color: #000;
+                @include fontSW(24px, 400);
+            }
         }
     }
 }
@@ -1121,6 +1329,7 @@ html {
         }
     }
     .configurations {
+        margin-bottom: 40px;
         & > h1 {
             @include fontSW(24px, 700);
             text-transform: uppercase;
@@ -1136,6 +1345,93 @@ html {
         &__info {
             @include fontSW(20px, 500);
             margin-bottom: 25px;
+        }
+        &__list {
+            &-content {
+                // max-width: 88.8%;
+                // margin: 0 auto;
+                box-shadow: none;
+                padding: 0;
+            }
+            &-item {
+                display: grid;
+                grid-template-columns: 134px 1fr;
+                justify-content: start;
+                // column-gap: 36px;
+                background: #fff;
+                box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.15);
+                &-characteristic {
+                    margin: 0 auto;
+                    grid-column: 2/3;
+                    grid-row: 1/3;
+                    & > h2 {
+                        @include fontSW(15px, 800);
+                        color: $additionalColor;
+                        margin-bottom: 16px;
+                    }
+                    & > ul {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 6px;
+                        & > li {
+                            display: flex;
+                            align-items: center;
+                            gap: 18px;
+                            @include fontSW(12px, 500);
+                        }
+                    }
+                }
+                &-credit {
+                    padding-left: 13px;
+                    grid-column: 1/2;
+                    grid-row: 2/3;
+                    @include fontSW(12px, 400);
+                    margin-bottom: 18px;
+                    & > h2 {
+                        margin-bottom: 8px;
+                    }
+                }
+                &-price {
+                    align-items: center;
+                    grid-column: 1/2;
+                    grid-row: 1/2;
+                    background-color: #eee;
+                    text-align: center;
+                    padding: 12px 0 8px 0;
+                    margin-bottom: 10px;
+                    & > h4 {
+                        @include fontSW(12px, 500);
+                    }
+                    & > h5 {
+                        @include fontSW(14px, 500);
+                        color: $maneTextColor;
+                        & > span {
+                            @include fontSW(14px, 800);
+                            color: $additionalColor;
+                        }
+                    }
+                }
+                &-btns {
+                    grid-column: 1/3;
+                    grid-row: 3/4;
+                    flex-direction: column;
+                    margin-bottom: 14px;
+                    &1 {
+                        width: 296px;
+                        height: 38px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                    &2 {
+                        width: 296px;
+                        height: 38px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                }
+            }
         }
     }
     .credit {
@@ -1259,6 +1555,150 @@ html {
         &__content {
             margin-top: 40px;
             padding-top: 20px;
+        }
+    }
+    .custom-checkbox {
+        &-text {
+            @include fontSW(7px, 400);
+        }
+    }
+    .fancybox-content {
+        max-width: 360px;
+        max-height: 416px;
+    }
+    .fancybox-button svg path {
+        fill: #fff;
+    }
+    .modals {
+        &__call {
+            width: 360px;
+            height: 416px;
+            flex-direction: column;
+            &-img {
+                width: 360px;
+                height: 162px;
+                background-repeat: no-repeat;
+                width: 100%;
+            }
+            &-text {
+                padding: 12px 33px 14px 23px;
+                & > h2 {
+                    @include fontSW(18px, 500);
+                    margin-bottom: 8px;
+                    max-width: 299px;
+                }
+                & > h3 {
+                    @include fontSW(12px, 400);
+                    // line-height: 0%;
+                    margin-bottom: 10px;
+                    max-width: 249px;
+                }
+                & > form {
+                    display: flex;
+                    flex-direction: column;
+                    & > input {
+                        @include fontSW(10px, 400);
+                        padding-bottom: 9px;
+                        margin-bottom: 15px;
+                    }
+                    & > button {
+                        @include fontSW(15px, 700);
+                        padding: 16px 75px;
+                        margin-bottom: 16px;
+                    }
+                }
+            }
+        }
+        &__credit {
+            width: 360px;
+            height: 416px;
+            flex-direction: column;
+            &-img {
+                width: 360px;
+                height: 162px;
+                background-repeat: no-repeat;
+                width: 100%;
+            }
+            &-text {
+                padding: 12px 33px 14px 23px;
+                & > h2 {
+                    @include fontSW(18px, 500);
+                    margin-bottom: 8px;
+                    max-width: 299px;
+                }
+                & > h3 {
+                    @include fontSW(12px, 400);
+                    // line-height: 0%;
+                    margin-bottom: 10px;
+                    max-width: 249px;
+                }
+                & > form {
+                    display: flex;
+                    flex-direction: column;
+                    & > input {
+                        @include fontSW(10px, 400);
+                        padding-bottom: 9px;
+                        margin-bottom: 15px;
+                    }
+                    & > button {
+                        @include fontSW(15px, 700);
+                        padding: 16px 60px;
+                        margin-bottom: 16px;
+                    }
+                }
+            }
+        }
+        &__tradein {
+            width: 360px;
+            height: 416px;
+            flex-direction: column;
+            &-img {
+                width: 360px;
+                height: 162px;
+                background-repeat: no-repeat;
+                width: 100%;
+            }
+            &-text {
+                padding: 12px 33px 14px 23px;
+                & > h2 {
+                    @include fontSW(18px, 500);
+                    margin-bottom: 8px;
+                    max-width: 299px;
+                }
+                & > h3 {
+                    @include fontSW(12px, 400);
+                    // line-height: 0%;
+                    margin-bottom: 10px;
+                    max-width: 249px;
+                }
+                & > form {
+                    display: flex;
+                    flex-direction: column;
+                    & > input {
+                        @include fontSW(10px, 400);
+                        padding-bottom: 9px;
+                        margin-bottom: 15px;
+                    }
+                    & > button {
+                        @include fontSW(15px, 700);
+                        padding: 16px 60px;
+                        margin-bottom: 24px;
+                    }
+                }
+            }
+        }
+        &__success {
+            width: 360px;
+            height: 322px;
+            &-text {
+                & > h2 {
+                    @include fontSW(26px, 700);
+                    margin-bottom: 26px;
+                }
+                & > h3 {
+                    @include fontSW(17px, 400);
+                }
+            }
         }
     }
 }
