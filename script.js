@@ -136,7 +136,7 @@ function init() {
         },
         {
             iconLayout: "default#image",
-            iconImageHref: "../img/PC/mapPin.png",
+            iconImageHref: "./img/PC/mapPin.png",
             iconImageSize: [65, 85], // Размер изображения
             iconImageOffset: [-25, -85], // Смещение изображения
         }
