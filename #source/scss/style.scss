@@ -463,10 +463,7 @@ html {
         justify-content: center;
         gap: 111px;
         margin-bottom: 84px;
-        &-1 {
-        }
-        &-2 {
-        }
+       
     }
     &__info {
         @include fontSW(40px, 500);
